@@ -13,5 +13,10 @@ namespace Terminal_Outbreak.Mainframe
             while (Console.ReadKey(true).Key != ConsoleKey.Enter) ;
             return true;
         }
+
+        public static void ExitGame()
+        {
+            Environment.Exit(0);
+        }
     }
 }

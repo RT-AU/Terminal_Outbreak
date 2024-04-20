@@ -10,11 +10,13 @@ namespace Terminal_Outbreak.Entities
     internal class Player
     {
         private string name;
+        private int maxHealth;
         private int health;
         private List<Equipment> inventory;
         public Player() 
         { 
             name = "default";
+            maxHealth = 100;
             health = 100;
             inventory = new List<Equipment>();
         }
@@ -29,6 +31,11 @@ namespace Terminal_Outbreak.Entities
             return name;
         }
 
+        public int getHealth()
+        {
+            return health;
+        }
+
         public void Damage(int damage) 
         { 
             health -= damage;
@@ -36,7 +43,11 @@ namespace Terminal_Outbreak.Entities
 
         public void Heal(int heal) 
         {
-            health += heal;
+            if (health + heal > maxHealth)
+            {
+                health = maxHealth;
+            } else health += heal;
+
         }
 
         public void AddItem (Equipment item) 

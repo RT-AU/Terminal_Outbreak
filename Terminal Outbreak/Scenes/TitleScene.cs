@@ -19,7 +19,7 @@ namespace Terminal_Outbreak.Scenes
         {
             string mainTitle = ($"{Environment.NewLine}▄▄▄█████▓█████ ██▀███  ███▄ ▄███▓██▓███▄    █ ▄▄▄      ██▓    {Environment.NewLine}▓  ██▒ ▓▓█   ▀▓██ ▒ ██▓██▒▀█▀ ██▓██▒██ ▀█   █▒████▄   ▓██▒    {Environment.NewLine}▒ ▓██░ ▒▒███  ▓██ ░▄█ ▓██    ▓██▒██▓██  ▀█ ██▒██  ▀█▄ ▒██░    {Environment.NewLine}░ ▓██▓ ░▒▓█  ▄▒██▀▀█▄ ▒██    ▒██░██▓██▒  ▐▌██░██▄▄▄▄██▒██░    {Environment.NewLine}  ▒██▒ ░░▒████░██▓ ▒██▒██▒   ░██░██▒██░   ▓██░▓█   ▓██░██████▒{Environment.NewLine}  ▒ ░░  ░░ ▒░ ░ ▒▓ ░▒▓░ ▒░   ░  ░▓ ░ ▒░   ▒ ▒ ▒▒   ▓▒█░ ▒░▓  ░{Environment.NewLine}    ░    ░ ░  ░ ░▒ ░ ▒░  ░      ░▒ ░ ░░   ░ ▒░ ▒   ▒▒ ░ ░ ▒  ░{Environment.NewLine}  ░        ░    ░░   ░░      ░   ▒ ░  ░   ░ ░  ░   ▒    ░ ░   {Environment.NewLine} ▒█████  █ ░  ██▄▄▄█████▓▄▄▄▄░  ██▀███ ▓█████▄▄▄   ░  ██ ▄█▀ ░{Environment.NewLine}▒██▒  ██▒██  ▓██▓  ██▒ ▓▓█████▄▓██ ▒ ██▓█   ▒████▄    ██▄█▒   {Environment.NewLine}▒██░  ██▓██  ▒██▒ ▓██░ ▒▒██▒ ▄█▓██ ░▄█ ▒███ ▒██  ▀█▄ ▓███▄░   {Environment.NewLine}▒██   ██▓▓█  ░██░ ▓██▓ ░▒██░█▀ ▒██▀▀█▄ ▒▓█  ░██▄▄▄▄██▓██ █▄   {Environment.NewLine}░ ████▓▒▒▒█████▓  ▒██▒ ░░▓█  ▀█░██▓ ▒██░▒████▓█   ▓██▒██▒ █▄  {Environment.NewLine}░ ▒░▒░▒░░▒▓▒ ▒ ▒  ▒ ░░  ░▒▓███▀░ ▒▓ ░▒▓░░ ▒░ ▒▒   ▓▒█▒ ▒▒ ▓▒  {Environment.NewLine}  ░ ▒ ▒░░░▒░ ░ ░    ░   ▒░▒   ░  ░▒ ░ ▒░░ ░  ░▒   ▒▒ ░ ░▒ ▒░  {Environment.NewLine}░ ░ ░ ▒  ░░░ ░ ░  ░      ░    ░  ░░   ░   ░   ░   ▒  ░ ░░ ░   {Environment.NewLine}    ░ ░    ░             ░        ░       ░  ░    ░  ░  ░     {Environment.NewLine}");
             string display = ($"In a world ravaged by an unknown plague, society has crumbled, and the streets teem with the undead. {Environment.NewLine}As a survivor, you must navigate through the chaos, scavenge for resources, and fight to stay alive. {Environment.NewLine}Welcome to Terminal Outbreak, and prepare to make every effort to OUTLIVE the UNDEAD.{Environment.NewLine}{Environment.NewLine}(Use the Arrow Keys to cycle through options and Enter to select){Environment.NewLine}");
-            string[] options = { "Play", "About", "Exit" };
+            string[] options = {"Play", "About", "Exit"};
 
             Menu mainMenu = new Menu(display, options, mainTitle);
             int selectedIndex = mainMenu.Run();
@@ -52,7 +52,7 @@ namespace Terminal_Outbreak.Scenes
                     break;
 
                 case 2:
-                    ExitGame();
+                    Utilities.ExitGame();
                     break;
             }
         }
@@ -63,10 +63,7 @@ namespace Terminal_Outbreak.Scenes
             terminalOutbreakGame.creditScene.Run();
         }
 
-        private void ExitGame()
-        {
-            Environment.Exit(0);
-        }
+        
 
         private void DisplayAboutInformation()
         {
