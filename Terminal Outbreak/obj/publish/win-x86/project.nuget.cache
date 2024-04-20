@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "4miLBOu8iPkDXhTjDadbl+gSPMWS/aaZolv3Czv5vEOf2dYKuGEV+gKTv8lkBAKiMNN4l+fVuFwg0ZTCeuBzgg==",
+  "success": true,
+  "projectFilePath": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Terminal Outbreak.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zander Dawn\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.4\\microsoft.net.illink.tasks.8.0.4.nupkg.sha512",
+    "C:\\Users\\Zander Dawn\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.4\\microsoft.netcore.app.runtime.win-x86.8.0.4.nupkg.sha512",
+    "C:\\Users\\Zander Dawn\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.4\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.4.nupkg.sha512",
+    "C:\\Users\\Zander Dawn\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.4\\microsoft.aspnetcore.app.runtime.win-x86.8.0.4.nupkg.sha512",
+    "C:\\Users\\Zander Dawn\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\8.0.4\\microsoft.netcore.app.crossgen2.win-x64.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

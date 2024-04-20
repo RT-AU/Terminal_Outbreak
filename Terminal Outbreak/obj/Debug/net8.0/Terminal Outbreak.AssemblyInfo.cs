@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Terminal Outbreak")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3865ad19610e497b90575f57abea0171f4e003a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37c2011f8cfa35bf2fc128ed6160b18392efec81")]
 [assembly: System.Reflection.AssemblyProductAttribute("Terminal Outbreak")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Terminal Outbreak")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
