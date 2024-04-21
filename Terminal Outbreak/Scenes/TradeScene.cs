@@ -7,10 +7,10 @@ using Terminal_Outbreak.Mainframe;
 
 namespace Terminal_Outbreak.Scenes
 {
-    internal class TraderScene : Scene
+    internal class TradeScene : Scene
     {
 
-        public TraderScene(TerminalOutbreakGame game) : base(game)
+        public TradeScene(TerminalOutbreakGame game) : base(game)
         {
 
         }

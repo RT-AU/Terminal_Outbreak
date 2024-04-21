@@ -15,22 +15,29 @@ namespace Terminal_Outbreak.Mainframe
         public Player player;
         public TitleScene titleScene;
         public CreditScene creditScene;
-        public DayScene dayScene;
+        public BaseScene baseScene;
+        public ResupplyScene resupplyScene;
+        //public RepairScene repairScene;
 
         public BaseManager baseManager;
+        public ResourceManager resourceManager;
 
         public TerminalOutbreakGame()
         {
             titleScene = new TitleScene(this);
             creditScene = new CreditScene(this);
-            dayScene = new DayScene(this);
-            baseManager = new BaseManager();
+            baseScene = new BaseScene(this);
+            resupplyScene = new ResupplyScene(this);
+
             player = new Player();
+
+            baseManager = new BaseManager();
+            resourceManager = new ResourceManager();
         }
 
         public void Start()
         {
-            dayScene.Run();
+            baseScene.Run();
         }
 
 

@@ -56,6 +56,38 @@ namespace Terminal_Outbreak.Mainframe
             Console.ResetColor();
         }
 
+        private void DrawSubDisplay()
+        {
+            if (mainTitle != "")
+            {
+                Console.WriteLine(mainTitle);
+            }
+
+            Console.WriteLine(initialDisplay);
+
+            for (int i = 0; i < options.Length; i++)
+            {
+                string currentOption = options[i];
+                string indicator;
+
+                if (i == selectedIndex)
+                {
+                    indicator = "->";
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.BackgroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    indicator = "  ";
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.BackgroundColor = ConsoleColor.Black;
+                }
+
+                Console.WriteLine($"{indicator} << {currentOption} >>");
+            }
+            Console.ResetColor();
+        }
+
         public int Run()
         {
             ConsoleKey keyPressed;
@@ -63,6 +95,43 @@ namespace Terminal_Outbreak.Mainframe
             {
                 Console.Clear();
                 DrawDisplay();
+
+                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                keyPressed = keyInfo.Key;
+
+                //update selectedIndex based on arrow keys
+                if (keyPressed == ConsoleKey.UpArrow)
+                {
+                    selectedIndex--;
+                    if (selectedIndex == -1)
+                    {
+                        selectedIndex = options.Length - 1;
+                    }
+
+
+                }
+                else if (keyPressed == ConsoleKey.DownArrow)
+                {
+                    selectedIndex++;
+                    if (selectedIndex == options.Length)
+                    {
+                        selectedIndex = 0;
+                    }
+
+                }
+            }
+            while (keyPressed != ConsoleKey.Enter);
+
+            return selectedIndex;
+        }
+
+        public int RunHeaderVersion()
+        {
+            ConsoleKey keyPressed;
+            do
+            {
+                Console.Clear();
+                DrawSubDisplay();
 
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                 keyPressed = keyInfo.Key;

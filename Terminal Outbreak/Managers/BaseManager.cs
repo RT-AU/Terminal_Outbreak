@@ -33,6 +33,11 @@ namespace Terminal_Outbreak.Managers
             prepTime = 12.0f;
         }
 
+        public float getTime()
+        {
+            return prepTime;
+        }
+
         public int checkFoodRations()
         {
             return foodRations;

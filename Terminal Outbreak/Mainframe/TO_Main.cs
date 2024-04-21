@@ -11,7 +11,7 @@ namespace Terminal_Outbreak.Mainframe
 
         static void Main(string[] args)
         {
-            Console.Title = "Terminal Outbreak: Outlive The Undead";
+            Console.Title = "Terminal Outbreak";
             Console.CursorVisible = false;
 
             TerminalOutbreakGame terminalOutbreakGame = new TerminalOutbreakGame();

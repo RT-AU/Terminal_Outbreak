@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Terminal_Outbreak.Defences;
@@ -9,41 +10,34 @@ using Terminal_Outbreak.Mainframe;
 
 namespace Terminal_Outbreak.Scenes
 {
-    internal class DayScene : Scene
+    internal class BaseScene : Scene
     {
 
-        public DayScene(TerminalOutbreakGame game) : base(game)
+        public BaseScene(TerminalOutbreakGame game) : base(game)
         {
 
         }
 
         public override void Run()
         {
-
-            string display = ($"{terminalOutbreakGame.player.GetName()}'s Outpost.{Environment.NewLine}Health: {terminalOutbreakGame.player.getHealth()}{Environment.NewLine}");
+            string header = Utils.FrameText(terminalOutbreakGame.player.GetName() + "'s Outpost");
+            string display = ($"{header}{Environment.NewLine}{terminalOutbreakGame.player.GetName()}'s Health: {terminalOutbreakGame.player.getHealth()}{Environment.NewLine}");
             display += ($"Traps: {terminalOutbreakGame.baseManager.getTrapCount()} {Environment.NewLine}Food Rations: {terminalOutbreakGame.baseManager.checkFoodRations()}{Environment.NewLine}");
             display += ($"Resources: 0{Environment.NewLine}");
             display += ($"Allies: 0{Environment.NewLine}");
-            string[] options = {"Scavange/Loot", "Build/Repair", "Equipment", "Trade", "Exit Game"};
+            display += ($"{Environment.NewLine}Time remaining in day: {terminalOutbreakGame.baseManager.getTime()} hours{Environment.NewLine}");
+            string[] options = {"Resupply", "Build/Repair", "Equipment", "Trade", "Exit Game"};
 
             Menu dayMenu = new Menu(display, options);
             int selectedIndex = dayMenu.Run();
 
             switch (selectedIndex)
             {
-                case 0:
-                    Console.Clear();
-
-                    Console.WriteLine("-----------------");
-                    Console.WriteLine("| Scavange/Loot |");
-                    Console.WriteLine("-----------------");
-                    Console.WriteLine();
-
-                    Utilities.PressEnter();
-                    this.Run();
+                case 0: //Resupply
+                    terminalOutbreakGame.resupplyScene.Run();
                    
                     break;
-
+                    
                 case 1:
                     Console.Clear();
 
@@ -52,7 +46,7 @@ namespace Terminal_Outbreak.Scenes
                     Console.WriteLine("----------------");
                     Console.WriteLine();
 
-                    Utilities.PressEnter();
+                    Utils.PressEnter();
                     this.Run();
                     break;
 
@@ -64,7 +58,7 @@ namespace Terminal_Outbreak.Scenes
                     Console.WriteLine("-------------");
                     Console.WriteLine();
 
-                    Utilities.PressEnter();
+                    Utils.PressEnter();
                     this.Run();
                     break;
                 case 3:
@@ -75,7 +69,7 @@ namespace Terminal_Outbreak.Scenes
                     Console.WriteLine("---------");
                     Console.WriteLine();
 
-                    Utilities.PressEnter();
+                    Utils.PressEnter();
                     this.Run();
                     break;
                 case 4:
@@ -84,7 +78,7 @@ namespace Terminal_Outbreak.Scenes
                     string? choice = Console.ReadLine()?.ToLower();
                     if (choice =="y" || choice == "yes")
                     {
-                        Utilities.ExitGame();
+                        Utils.ExitGame();
                     }
                     else
                     {
