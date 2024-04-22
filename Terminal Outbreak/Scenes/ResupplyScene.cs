@@ -23,7 +23,7 @@ namespace Terminal_Outbreak.Scenes
             resources = new List<Resource>();
             equipment = new List<Equipment>();
             failedRun = false;
-    }
+        }
 
         public override void Run()
         {
@@ -65,8 +65,8 @@ namespace Terminal_Outbreak.Scenes
             if (terminalOutbreakGame.baseManager.getTime() >= actionTime)
             {
                 failedRun = false;
-                // terminalOutbreakGame.baseManager.reduceTime(actionTime);                             // TO DO----------- Turn this back on
-                List<Resource> resultsList = terminalOutbreakGame.resourceManager.Resupply(actionTime); // fetches gathered resources with Long Resupply being true
+                //terminalOutbreakGame.baseManager.reduceTime(actionTime);                                // subtracts the actionTime from the time remaining in the day
+                List<Resource> resultsList = terminalOutbreakGame.resourceManager.Resupply(actionTime); // fetches gathered resources and passes in actionTime to differentiate long and short supply runs
                 
                 Dictionary<string, int> resourceCounts = new Dictionary<string, int>();
                 
@@ -90,6 +90,7 @@ namespace Terminal_Outbreak.Scenes
                     results += $"{Environment.NewLine}{kvp.Key}: {kvp.Value}";
                 }
 
+                terminalOutbreakGame.baseManager.increaseResources(resultsList);
 
                 string header = Utils.FrameText("Results");
                 string display = $"Spent {actionTime} hours looking and found {results}";
@@ -107,25 +108,5 @@ namespace Terminal_Outbreak.Scenes
                 terminalOutbreakGame.resupplyScene.Run(); // calls the screen again with updated info
             }
         }
-
-        //private void ShortSupplyRun()
-        //{
-        //    float actionTime = 4f;
-        //    if (terminalOutbreakGame.baseManager.getTime() >= actionTime)
-        //    {
-        //        failedRun = false;
-        //        terminalOutbreakGame.baseManager.reduceTime(actionTime);
-        //        Console.WriteLine($"Spent {actionTime} hours looking");
-        //        Utils.PressEnter();
-        //        terminalOutbreakGame.baseScene.Run();                   // TO DO - change to a results screen
-        //    }
-        //    else
-        //    {
-        //        failedRun = true;
-        //        terminalOutbreakGame.resupplyScene.Run(); // calls the screen again with updated info
-        //    }
-        //}
-
-
     }
 }

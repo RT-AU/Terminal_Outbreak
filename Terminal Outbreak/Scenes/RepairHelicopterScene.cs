@@ -7,13 +7,11 @@ using Terminal_Outbreak.Mainframe;
 
 namespace Terminal_Outbreak.Scenes
 {
-    internal class RepairScene : Scene
+    internal class RepairHelicopterScene : Scene
     {
-
-        public RepairScene(TerminalOutbreakGame game) : base(game)
+        public RepairHelicopterScene(TerminalOutbreakGame game) : base(game)
         {
 
         }
-
     }
 }

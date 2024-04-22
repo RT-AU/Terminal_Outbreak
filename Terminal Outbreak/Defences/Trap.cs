@@ -22,6 +22,7 @@ namespace Terminal_Outbreak.Defences
         private bool behindWall;
         private Dictionary<string, int> recipe;
         private string[] ingredientsArray = ["wood", "metal", "pipes", "fuel", "gun parts"];
+        private bool isBuilt;
 
 
         public Trap(int id) 
@@ -39,6 +40,8 @@ namespace Terminal_Outbreak.Defences
                     trapRequiresResource = false;
                     behindWall = false;
                     recipe.Add("wood", 5);
+
+                    isBuilt = false;
                     break;
 
                 case 1:
@@ -51,6 +54,8 @@ namespace Terminal_Outbreak.Defences
                     behindWall = false;
                     recipe.Add("wood", 5);
                     recipe.Add("metal", 5);
+
+                    isBuilt = false;
                     break;
 
                 case 2:
@@ -65,6 +70,8 @@ namespace Terminal_Outbreak.Defences
                     recipe.Add("metal", 5);
                     recipe.Add("pipes", 2);
                     recipe.Add("barrel", 1);
+
+                    isBuilt = false;
                     break;
 
                 case 3:
@@ -77,12 +84,27 @@ namespace Terminal_Outbreak.Defences
                     resourceRequired = "Ammunition";
                     behindWall = true;
                     recipe.Add("metal", 10);
-                    recipe.Add("Gun Parts", 10);
+                    recipe.Add("gun parts", 10);
+
+                    isBuilt = false;
                     break;
             }
         }
 
-        public string getTrapName()
+        public void BuildTrap()
+        {
+            isBuilt = true;
+        }
+
+        public bool IsBuilt()
+        {
+            return isBuilt;
+        }
+        public int GetTrapID()
+        {
+            return trapID;
+        }
+        public string GetTrapName()
         {
             return trapName;
         }
@@ -97,17 +119,17 @@ namespace Terminal_Outbreak.Defences
             trapHealth = trapMaxHealth;
         }
 
-        public int getHealth()
+        public int GetHealth()
         {
             return trapHealth;
         }
 
-        public int getDamage()
+        public int GetDamage()
         {
             return trapDamage;
         }
 
-        public string getResourceRequired()
+        public string GetResourceRequired()
         {
             if (trapRequiresResource == true) 
             {
@@ -115,18 +137,18 @@ namespace Terminal_Outbreak.Defences
             }
             else
             {
-                return "No resources are required for this trap";
+                return "NONE";
             }
         }
 
-        public string getRecipe()
+        public string GetRecipe()
         {
-            string ingredients = "Requirements for building this trap are:";
+            string ingredients = "Required Materials:";
             foreach (string ingredient in ingredientsArray)
             {
                 if (recipe.ContainsKey(ingredient))
                 {
-                    ingredients += $"{Environment.NewLine}{recipe[ingredient]} {ingredient}";
+                    ingredients += $"{Environment.NewLine}  {recipe[ingredient]} {ingredient}";
                 }
                
             }

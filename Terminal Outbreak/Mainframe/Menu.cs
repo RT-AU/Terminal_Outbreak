@@ -13,7 +13,6 @@ namespace Terminal_Outbreak.Mainframe
         private string[] options;
         private int selectedIndex;
 
-
         public Menu(string initialDisplay, string[] options, string mainTitle = "")
         {
             this.mainTitle = mainTitle;
