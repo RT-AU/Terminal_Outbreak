@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Terminal_Outbreak.Mainframe;
 
-namespace Terminal_Outbreak.Scenes
+namespace Terminal_Outbreak.Scenes.ConstructionScenes
 {
-    internal class WallMaintenenceScene : Scene
+    internal class RepairHelicopterScene : Scene
     {
-        public WallMaintenenceScene(TerminalOutbreakGame game) : base(game)
+        public RepairHelicopterScene(TerminalOutbreakGame game) : base(game)
         {
 
         }

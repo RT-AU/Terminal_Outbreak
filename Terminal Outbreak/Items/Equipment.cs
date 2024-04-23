@@ -28,11 +28,11 @@ namespace Terminal_Outbreak.Items
             equipmentType = "default";
             requiresResource = "none";
             weaponLongRangeDamage = 0;
-            weaponLongRangeMulti = 0;
+            weaponLongRangeMulti = 1; // weapons should always attack at least 1 enemy, unless otherwise specified
             weaponMidRangeDamage = 0;
-            weaponMidRangeMulti = 0;
+            weaponMidRangeMulti = 1;
             weaponCQDamage = 0;
-            weaponCQMulti = 0;
+            weaponCQMulti = 1;
 
             switch (ID)
             {
@@ -84,10 +84,10 @@ namespace Terminal_Outbreak.Items
                     equipmentName = "HMG";
                     equipmentType = "Primary";
                     weaponLongRangeDamage = 5;
-                    weaponLongRangeMulti = 3;
+                    weaponLongRangeMulti = 5;
 
                     weaponMidRangeDamage = 8;
-                    weaponMidRangeMulti = 0;
+                    weaponMidRangeMulti = 2;
 
                     weaponCQDamage = 0;
                     break;

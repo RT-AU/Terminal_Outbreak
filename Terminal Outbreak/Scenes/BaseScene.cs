@@ -20,7 +20,7 @@ namespace Terminal_Outbreak.Scenes
 
         public override void Run()
         { 
-            Dictionary<string, int> resourceList = terminalOutbreakGame.baseManager.getResourceList(); // build a dictionary using resources stored in the baseManager
+            Dictionary<string, int> resourceList = terminalOutbreakGame.baseManager.GetResourceList(); // build a dictionary using resources stored in the baseManager
 
             string results = "";
             string trapsResults;
@@ -30,7 +30,7 @@ namespace Terminal_Outbreak.Scenes
             {
                 if (kvp.Key == "Food Rations")
                 {
-                    terminalOutbreakGame.baseManager.increaseFoodRations(kvp.Value);
+                    terminalOutbreakGame.baseManager.IncreaseFoodRations(kvp.Value);
                     continue;
                 }
                 
@@ -63,19 +63,19 @@ namespace Terminal_Outbreak.Scenes
                 trapsResults = "PUT METHOD TO FETCH TRAPS NAME HERE"; // TO DO -------------------
             }
 
-            string header = Utils.FrameText(terminalOutbreakGame.player.GetName() + "'s Outpost");
+            string header = Utils.FrameText(terminalOutbreakGame.player.GetName() + $"'s Outpost - Day {terminalOutbreakGame.baseManager.GetDayNumber()}");
             string display = ($"{header}{Environment.NewLine}{Environment.NewLine}Health: {terminalOutbreakGame.player.getHealth()}{Environment.NewLine}");
             
             display += ($"Allies: 0{Environment.NewLine}");
 
-            display += ($"Food Rations: {terminalOutbreakGame.baseManager.checkFoodRations()}{Environment.NewLine}");
+            display += ($"Food Rations: {terminalOutbreakGame.baseManager.CheckFoodRations()}{Environment.NewLine}");
             
             display += ($"{Environment.NewLine}Resources: {results}{Environment.NewLine}");
 
             display += ($"{Environment.NewLine}Traps: {trapsResults} {Environment.NewLine}");
 
-            display += ($"{Environment.NewLine}Time remaining in day: {terminalOutbreakGame.baseManager.getTime()} hours{Environment.NewLine}");
-            string[] options = {"Resupply", "Build/Repair", "Equipment", "Trade", "Exit Game"};
+            display += ($"{Environment.NewLine}Time remaining in day: {terminalOutbreakGame.baseManager.GetTime()} hours{Environment.NewLine}");
+            string[] options = {"Resupply", "Build/Repair", "Equipment", "Trade", "End Preparation Phase", "Exit Game"};
 
             Menu dayMenu = new Menu(display, options);
             int selectedIndex = dayMenu.Run();
@@ -114,6 +114,10 @@ namespace Terminal_Outbreak.Scenes
                     this.Run();
                     break;
                 case 4:
+                    terminalOutbreakGame.enemyManager.CreateWave(terminalOutbreakGame.baseManager.GetDayNumber()); // create a wave using the enemyManger's CreateWave funtion with a parameter of the current day
+                    terminalOutbreakGame.longRangeCombatScene.Run();
+                    break;
+                case 5:
                     Console.WriteLine("Are you sure you want to quit? y/n");
                     Console.CursorVisible = true;
                     string? choice = Console.ReadLine()?.ToLower();

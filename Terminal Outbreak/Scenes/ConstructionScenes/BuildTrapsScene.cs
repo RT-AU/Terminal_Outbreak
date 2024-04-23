@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terminal_Outbreak.Mainframe;
 
-namespace Terminal_Outbreak.Scenes
+namespace Terminal_Outbreak.Scenes.ConstructionScenes
 {
     internal class BuildTrapsScene : Scene
     {
@@ -28,7 +28,7 @@ namespace Terminal_Outbreak.Scenes
             switch (selectedIndex)
             {
                 case 0:
-                    if(terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt()==false)
+                    if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
                         terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
                     }
@@ -39,7 +39,7 @@ namespace Terminal_Outbreak.Scenes
                         Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
                         Utils.PressEnter();
                     }
-                    this.Run();
+                    Run();
                     break;
                 case 1:
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
@@ -53,7 +53,7 @@ namespace Terminal_Outbreak.Scenes
                         Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
                         Utils.PressEnter();
                     }
-                    this.Run();
+                    Run();
                     break;
                 case 2:
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
@@ -67,7 +67,7 @@ namespace Terminal_Outbreak.Scenes
                         Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
                         Utils.PressEnter();
                     }
-                    this.Run();
+                    Run();
                     break;
                 case 3:
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
@@ -81,7 +81,7 @@ namespace Terminal_Outbreak.Scenes
                         Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
                         Utils.PressEnter();
                     }
-                    this.Run();
+                    Run();
                     break;
                 case 4:
                     terminalOutbreakGame.constructionChoiceScene.Run();

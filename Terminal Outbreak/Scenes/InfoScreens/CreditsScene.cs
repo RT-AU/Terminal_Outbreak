@@ -5,19 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using Terminal_Outbreak.Mainframe;
 
-namespace Terminal_Outbreak.Scenes
+namespace Terminal_Outbreak.Scenes.InfoScreens
 {
-    internal class CreditScene : Scene 
+    internal class CreditsScene : Scene
     {
-        public CreditScene(TerminalOutbreakGame game) : base (game) 
-        { 
+        public CreditsScene(TerminalOutbreakGame game) : base(game)
+        {
 
         }
 
         public override void Run()
         {
             Console.Clear();
-            Console.WriteLine(terminalOutbreakGame.player.GetName()) ;
+            Console.WriteLine(terminalOutbreakGame.player.GetName());
         }
     }
 }

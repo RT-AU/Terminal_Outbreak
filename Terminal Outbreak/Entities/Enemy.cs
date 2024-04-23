@@ -6,58 +6,64 @@ using System.Threading.Tasks;
 
 namespace Terminal_Outbreak.Entities
 {
-    internal class Enemy(string enemyType)
+    internal class Enemy
     {
-        private string enemyType = enemyType;
+        private string enemyID = "";
         private int maxHealth;
         private int enemyDamage;
         private int barrierDamage;
-        private int currentLongRangeDistance;
-        private int currentMidRangeDistance;
-        private bool closeQuartersCombat;
+
 
         private int currentHealth;
 
 
 
-        public void createEnemy()
+        public Enemy(string enemyType)
         {
-            if (enemyType == "zombie")
+            switch (enemyType)
             {
-                maxHealth = 5;
-                enemyDamage = 5;
-                barrierDamage = 1;
-                currentLongRangeDistance = 5;
-            }
-            else if (enemyType == "boss")
-            {
-                maxHealth = 30;
-                enemyDamage = 20;
-                barrierDamage = 10;
-                currentLongRangeDistance = 5;
+                case "zombie":
+                    enemyID = enemyType;
+                    maxHealth = 5;
+                    currentHealth = maxHealth;
+                    enemyDamage = 5;
+                    barrierDamage = 1;
+                    break;
+                
+                case "boss":
+                    enemyID = enemyType;
+                    maxHealth = 30;
+                    currentHealth = maxHealth;
+                    enemyDamage = 20;
+                    barrierDamage = 10;
+                    break;
             }
         }
+        public string GetEnemyID()
+        {
+            return enemyID;
+        }
 
-        public void setHealth(int damage)
+        public void DealDamage(int damage)
         {
             currentHealth -= damage;
         }
 
+        
 
+        public int GetHealth() 
+        { 
+            return currentHealth; 
+        }
 
-        public int getHealth() { return currentHealth; }
+        public int GetDamage()
+        {
+            return enemyDamage;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        public int GetBarrierDamage()
+        {
+            return barrierDamage;
+        }
     }
 }

@@ -3,60 +3,20 @@
   "WorkspaceRootPath": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\managers\\basemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\managers\\basemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\combatscenes\\longrangecombatscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\combatscenes\\longrangecombatscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\buildtrapsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\buildtrapsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\defences\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\defences\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\basescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\basescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\constructionchoicescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\constructionchoicescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\mainframe\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\mainframe\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\constructionscenes\\buildtrapsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\constructionscenes\\buildtrapsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\managers\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\managers\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\mainframe\\terminaloutbreakgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\mainframe\\terminaloutbreakgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\repairhelicopterscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\repairhelicopterscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\wallmaintenencescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\wallmaintenencescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\resupplyscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\resupplyscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\items\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\items\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\defences\\barrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\defences\\barrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\items\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\items\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\managers\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\managers\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\entities\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,20 +27,76 @@
       "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\entities\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\managers\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\managers\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\defences\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\defences\\trap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\defences\\barrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\defences\\barrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\managers\\basemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\managers\\basemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\combatscenes\\closequarterscombatscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\combatscenes\\closequarterscombatscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\mainframe\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\mainframe\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\basescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\basescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\items\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\items\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\infoscreens\\creditsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\infoscreens\\creditsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\mainframe\\terminaloutbreakgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\mainframe\\terminaloutbreakgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\combatscenes\\midrangecombatscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\combatscenes\\midrangecombatscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\resupplyscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\resupplyscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\constructionscenes\\constructionchoicescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\constructionscenes\\constructionchoicescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\infoscreens\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\infoscreens\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\equipmentscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\equipmentscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\creditscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\creditscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\constructionscenes\\wallmaintenencescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\constructionscenes\\wallmaintenencescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\constructionscenes\\repairhelicopterscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\constructionscenes\\repairhelicopterscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\items\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\items\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\mainframe\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\tradescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\tradescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|e:\\development\\.net\\projects\\terminal outbreak - survive the undead\\terminal_outbreak\\terminal outbreak\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF123474-3EE2-4D2A-8041-162E6D5CAD85}|Terminal Outbreak\\Terminal Outbreak.csproj|solutionrelative:terminal outbreak\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,11 +118,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Menu.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Mainframe\\Menu.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Mainframe\\Menu.cs",
@@ -124,13 +136,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "ResourceManager.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\ResourceManager.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Managers\\ResourceManager.cs",
               "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\ResourceManager.cs",
               "RelativeToolTip": "Terminal Outbreak\\Managers\\ResourceManager.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAYwBYAAAAjAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwBYAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T13:04:00.533Z",
               "IsPinned": true,
@@ -138,33 +150,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BaseScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\BaseScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\BaseScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\BaseScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\BaseScene.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAiwHQAAADSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T04:29:01.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Enemy.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Entities\\Enemy.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Enemy.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Entities\\Enemy.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwB0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T12:45:48.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Equipment.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Equipment.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Items\\Equipment.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Equipment.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Items\\Equipment.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAYwFkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T12:54:32.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "BuildTrapsScene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\BuildTrapsScene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\BuildTrapsScene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\BuildTrapsScene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\BuildTrapsScene.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAIAxwBUAAABDAAAA",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\BuildTrapsScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\ConstructionScenes\\BuildTrapsScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\BuildTrapsScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\ConstructionScenes\\BuildTrapsScene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-22T10:43:35.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Player.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Player.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Entities\\Player.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Player.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Entities\\Player.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAswCEAAAASAAAA",
+              "DocumentIndex": 9,
+              "Title": "CloseQuartersCombatScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CombatScenes\\CloseQuartersCombatScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\CombatScenes\\CloseQuartersCombatScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CombatScenes\\CloseQuartersCombatScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\CombatScenes\\CloseQuartersCombatScene.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvx0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T04:31:52.817Z",
+              "WhenOpened": "2024-04-23T08:17:45.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
+              "Title": "EnemyManager.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\EnemyManager.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Managers\\EnemyManager.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\EnemyManager.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Managers\\EnemyManager.cs",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAwwCUAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T12:57:55.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseManager.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\BaseManager.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Managers\\BaseManager.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\BaseManager.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Managers\\BaseManager.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAYwEkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T12:58:58.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LongRangeCombatScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CombatScenes\\LongRangeCombatScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\CombatScenes\\LongRangeCombatScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CombatScenes\\LongRangeCombatScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\CombatScenes\\LongRangeCombatScene.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAFoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T08:16:47.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Barrier.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Defences\\Barrier.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Defences\\Barrier.cs",
@@ -177,163 +267,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Equipment.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Equipment.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Items\\Equipment.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Equipment.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Items\\Equipment.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAIwFsAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T12:54:32.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Resource.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Resource.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Items\\Resource.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Resource.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Items\\Resource.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAawDAAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T12:54:46.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TerminalOutbreakGame.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAawBwAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T14:10:58.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseScene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\BaseScene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\BaseScene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\BaseScene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\BaseScene.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAjwDkAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T04:29:01.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConstructionChoiceScene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionChoiceScene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\ConstructionChoiceScene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionChoiceScene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\ConstructionChoiceScene.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAADgvx8AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T05:02:56.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseManager.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\BaseManager.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Managers\\BaseManager.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\BaseManager.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Managers\\BaseManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T12:58:58.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Trap.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Defences\\Trap.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Defences\\Trap.cs",
               "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Defences\\Trap.cs",
               "RelativeToolTip": "Terminal Outbreak\\Defences\\Trap.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAYwFYAAAAlAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T07:33:50.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WallMaintenenceScene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\WallMaintenenceScene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\WallMaintenenceScene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\WallMaintenenceScene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\WallMaintenenceScene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "DocumentIndex": 4,
+              "Title": "Player.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Player.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Entities\\Player.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Player.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Entities\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T10:42:39.889Z",
+              "WhenOpened": "2024-04-20T04:31:52.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RepairHelicopterScene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\RepairHelicopterScene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\RepairHelicopterScene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\RepairHelicopterScene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\RepairHelicopterScene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "DocumentIndex": 13,
+              "Title": "CreditsScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\InfoScreens\\CreditsScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\InfoScreens\\CreditsScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\InfoScreens\\CreditsScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\InfoScreens\\CreditsScene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T10:42:56.959Z",
+              "WhenOpened": "2024-04-20T04:18:50.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TerminalOutbreakGame.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Mainframe\\TerminalOutbreakGame.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwDsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T14:10:58.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Enemy.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Entities\\Enemy.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Entities\\Enemy.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Entities\\Enemy.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAtAAAA",
+              "Title": "MidRangeCombatScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CombatScenes\\MidRangeCombatScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\CombatScenes\\MidRangeCombatScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CombatScenes\\MidRangeCombatScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\CombatScenes\\MidRangeCombatScene.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAswAkAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T12:45:48.645Z",
+              "WhenOpened": "2024-04-23T08:17:33.962Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "EnemyManager.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\EnemyManager.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Managers\\EnemyManager.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Managers\\EnemyManager.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Managers\\EnemyManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T12:57:55.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "ResupplyScene.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ResupplyScene.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\ResupplyScene.cs",
               "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ResupplyScene.cs",
               "RelativeToolTip": "Terminal Outbreak\\Scenes\\ResupplyScene.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAawGMAAABLAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwDkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T05:00:34.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ConstructionChoiceScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\ConstructionChoiceScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\ConstructionScenes\\ConstructionChoiceScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\ConstructionChoiceScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\ConstructionScenes\\ConstructionChoiceScene.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADgvysAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T05:02:56.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "TitleScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\InfoScreens\\TitleScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\InfoScreens\\TitleScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\InfoScreens\\TitleScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\InfoScreens\\TitleScene.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwB0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T04:07:57.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "EquipmentScene.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\EquipmentScene.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\EquipmentScene.cs",
@@ -346,33 +384,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TitleScene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\TitleScene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\TitleScene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\TitleScene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\TitleScene.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA0wB0AAAAXAAAA",
+              "DocumentIndex": 23,
+              "Title": "Resource.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Resource.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Items\\Resource.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Items\\Resource.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Items\\Resource.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAawDAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T04:07:57.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CreditScene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CreditScene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\CreditScene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\CreditScene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\CreditScene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T04:18:50.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T12:54:46.523Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "Scene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\Scene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\Scene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\Scene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\Scene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T04:04:32.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WallMaintenenceScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\WallMaintenenceScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\ConstructionScenes\\WallMaintenenceScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\WallMaintenenceScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\ConstructionScenes\\WallMaintenenceScene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T10:42:39.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RepairHelicopterScene.cs",
+              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\RepairHelicopterScene.cs",
+              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\ConstructionScenes\\RepairHelicopterScene.cs",
+              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\ConstructionScenes\\RepairHelicopterScene.cs",
+              "RelativeToolTip": "Terminal Outbreak\\Scenes\\ConstructionScenes\\RepairHelicopterScene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T10:42:56.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "Utils.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Mainframe\\Utils.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Mainframe\\Utils.cs",
@@ -380,12 +443,11 @@
               "RelativeToolTip": "Terminal Outbreak\\Mainframe\\Utils.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T03:49:41.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T03:49:41.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "TO_Main.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Mainframe\\TO_Main.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Mainframe\\TO_Main.cs",
@@ -393,24 +455,11 @@
               "RelativeToolTip": "Terminal Outbreak\\Mainframe\\TO_Main.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T12:42:07.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T12:42:07.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Scene.cs",
-              "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\Scene.cs",
-              "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\Scene.cs",
-              "ToolTip": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\Scene.cs",
-              "RelativeToolTip": "Terminal Outbreak\\Scenes\\Scene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T04:04:32.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "TradeScene.cs",
               "DocumentMoniker": "E:\\Development\\.NET\\Projects\\Terminal Outbreak - Survive the Undead\\Terminal_Outbreak\\Terminal Outbreak\\Scenes\\TradeScene.cs",
               "RelativeDocumentMoniker": "Terminal Outbreak\\Scenes\\TradeScene.cs",

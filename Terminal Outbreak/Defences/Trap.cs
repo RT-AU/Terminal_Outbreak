@@ -19,6 +19,7 @@ namespace Terminal_Outbreak.Defences
         private int trapIsDestroyed;
         private bool trapRequiresResource;
         private string resourceRequired = "N/A";
+        private int resourceRequiredQuantity;
         private bool behindWall;
         private Dictionary<string, int> recipe;
         private string[] ingredientsArray = ["wood", "metal", "pipes", "fuel", "gun parts"];
@@ -66,6 +67,7 @@ namespace Terminal_Outbreak.Defences
                     trapIsDestroyed = 0;
                     trapRequiresResource = true;
                     resourceRequired = "Fuel";
+                    resourceRequiredQuantity = 2;
                     behindWall = true;
                     recipe.Add("metal", 5);
                     recipe.Add("pipes", 2);
@@ -82,6 +84,7 @@ namespace Terminal_Outbreak.Defences
                     trapIsDestroyed = 0;
                     trapRequiresResource = true;
                     resourceRequired = "Ammunition";
+                    resourceRequiredQuantity = 5;
                     behindWall = true;
                     recipe.Add("metal", 10);
                     recipe.Add("gun parts", 10);
@@ -138,6 +141,18 @@ namespace Terminal_Outbreak.Defences
             else
             {
                 return "NONE";
+            }
+        }
+
+        public int GetResourceRequiredQuanitity()
+        {
+            if (trapRequiresResource == true)
+            {
+                return resourceRequiredQuantity;
+            }
+            else
+            {
+                return 0;
             }
         }
 

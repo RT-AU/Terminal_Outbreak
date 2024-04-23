@@ -32,7 +32,7 @@ namespace Terminal_Outbreak.Scenes
             string enoughTime = "You prepare to head out on a resupply run. ";
             if(failedRun == true)
             {
-                enoughTime = $"Not enough time! There is only {terminalOutbreakGame.baseManager.getTime()} hours left before nightfall. ";
+                enoughTime = $"Not enough time! There is only {terminalOutbreakGame.baseManager.GetTime()} hours left before nightfall. ";
             }
 
             string display = Utils.WrapText($"{Environment.NewLine}{enoughTime}How much time do you want to spend looking for supplies?{Environment.NewLine}");
@@ -56,13 +56,12 @@ namespace Terminal_Outbreak.Scenes
                     terminalOutbreakGame.baseScene.Run();
                     break;
             }
-
         }
 
         private void SupplyRun(float timeTaken)
         {
             float actionTime = timeTaken;
-            if (terminalOutbreakGame.baseManager.getTime() >= actionTime)
+            if (terminalOutbreakGame.baseManager.GetTime() >= actionTime)
             {
                 failedRun = false;
                 //terminalOutbreakGame.baseManager.reduceTime(actionTime);                                // subtracts the actionTime from the time remaining in the day
@@ -85,12 +84,12 @@ namespace Terminal_Outbreak.Scenes
                 }
                 string results = "";
 
-                foreach (var kvp in resourceCounts) //                                              ============>>>>  TO DO: Use resourceCounts dictionary to update BaseManager Dictionary for total resources
+                foreach (var kvp in resourceCounts)
                 {
                     results += $"{Environment.NewLine}{kvp.Key}: {kvp.Value}";
                 }
 
-                terminalOutbreakGame.baseManager.increaseResources(resultsList);
+                terminalOutbreakGame.baseManager.IncreaseResources(resultsList);
 
                 string header = Utils.FrameText("Results");
                 string display = $"Spent {actionTime} hours looking and found {results}";

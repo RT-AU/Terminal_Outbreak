@@ -14,11 +14,13 @@ namespace Terminal_Outbreak.Managers
         private List<Resource> baseResources;
         private List<Trap> traps;
         private BarrierWall barrier;
+        private int dayNumber;
 
         public BaseManager()
         {
             prepTime = 12.0f;
             foodRations = 5;
+            dayNumber = 1;
             baseResources = new List<Resource>();
             traps = new List<Trap>();
             barrier = new BarrierWall();
@@ -30,33 +32,45 @@ namespace Terminal_Outbreak.Managers
         }
 
 
-        public void reduceTime(float time)
+        public void ReduceTime(float time)
         {
             prepTime -= time;
         }
 
-        public void resetTime()
+        public void ResetTime()
         {
             prepTime = 12.0f;
         }
 
-        public float getTime()
+        public float GetTime()
         {
             return prepTime;
         }
 
-        public int checkFoodRations()
+        public int CheckFoodRations()
         {
             return foodRations;
         }
 
-        public void increaseFoodRations(int amount)
+       
+
+        public void IncreaseFoodRations(int amount)
         {
             foodRations += amount;
         }
-        public void decreaseFoodRations(int amount)
+        public void DecreaseFoodRations(int amount)
         {
             foodRations -= amount;
+        }
+
+        public int GetDayNumber()
+        {
+            return dayNumber;
+        }
+
+        public void IncreaseDayNumber()
+        {
+            dayNumber++;
         }
 
         public void BuildTrap(int trapID)
@@ -81,13 +95,12 @@ namespace Terminal_Outbreak.Managers
             {
                 if (traps[i].IsBuilt() == false)
                 {
-                    if (i == 2)
+                    
+                    if (traps[i].GetResourceRequired() != "NONE")
                     {
-                        trapString += $"{Environment.NewLine}{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage and uses 2 Fuel Barrels every night)";
-                    }
-                    else if (i == 3)
-                    {
-                        trapString += $"{Environment.NewLine}{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage and uses 5 Ammunition every night)";
+                        string resourceRequired = traps[i].GetResourceRequired();
+                        int resourceQuantity = traps[i].GetResourceRequiredQuanitity();
+                        trapString += $"{Environment.NewLine}{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage and uses {resourceQuantity} {resourceRequired} every night)";
                     }
                     else
                     {
@@ -105,7 +118,7 @@ namespace Terminal_Outbreak.Managers
             return traps.Count;
         }
 
-        public void increaseResources(List<Resource> gatheredResources)
+        public void IncreaseResources(List<Resource> gatheredResources)
         {
             foreach (Resource resource in gatheredResources)
             {
@@ -113,7 +126,7 @@ namespace Terminal_Outbreak.Managers
             }
         }
 
-        public Dictionary<string, int> getResourceList()
+        public Dictionary<string, int> GetResourceList()
         {
             Dictionary<string, int> resourceList = new Dictionary<string, int>();
 
