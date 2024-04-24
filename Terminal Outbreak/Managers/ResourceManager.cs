@@ -60,9 +60,6 @@ namespace Terminal_Outbreak.Managers
                 {
                     if (randomItem <= lootTable[i])
                     {
-                        //Console.WriteLine(randomQuantity); // REMOVE once program running smoothly
-                        //Console.WriteLine(randomItem);
-                        //Utils.PressEnter();
                         Resource resource = new Resource(i);
                         foundResources.Add(resource);
                         break;

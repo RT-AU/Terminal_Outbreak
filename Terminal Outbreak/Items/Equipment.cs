@@ -13,8 +13,8 @@ namespace Terminal_Outbreak.Items
         private string equipmentType;
         private int weaponLongRangeDamage;
         private int weaponLongRangeMulti;
-        private int weaponMidRangeDamage;
-        private int weaponMidRangeMulti;
+        private int weaponMediumRangeDamage;
+        private int weaponMediumRangeMulti;
         private int weaponCQDamage;
         private int weaponCQMulti;
         private string requiresResource;
@@ -29,8 +29,8 @@ namespace Terminal_Outbreak.Items
             requiresResource = "none";
             weaponLongRangeDamage = 0;
             weaponLongRangeMulti = 1; // weapons should always attack at least 1 enemy, unless otherwise specified
-            weaponMidRangeDamage = 0;
-            weaponMidRangeMulti = 1;
+            weaponMediumRangeDamage = 0;
+            weaponMediumRangeMulti = 1;
             weaponCQDamage = 0;
             weaponCQMulti = 1;
 
@@ -64,8 +64,8 @@ namespace Terminal_Outbreak.Items
                     weaponLongRangeDamage = 10;
                     weaponLongRangeMulti = 0;
 
-                    weaponMidRangeDamage = 5;
-                    weaponMidRangeMulti = 0;
+                    weaponMediumRangeDamage = 5;
+                    weaponMediumRangeMulti = 0;
 
                     weaponCQDamage = 3;
                     break;
@@ -75,8 +75,8 @@ namespace Terminal_Outbreak.Items
                     weaponLongRangeDamage = 20;
                     weaponLongRangeMulti = 4; //can pierce 4 (make random chance between 2-4)
 
-                    weaponMidRangeDamage = 1;
-                    weaponMidRangeMulti = 0;
+                    weaponMediumRangeDamage = 1;
+                    weaponMediumRangeMulti = 0;
 
                     weaponCQDamage = 1;
                     break;
@@ -86,8 +86,8 @@ namespace Terminal_Outbreak.Items
                     weaponLongRangeDamage = 5;
                     weaponLongRangeMulti = 5;
 
-                    weaponMidRangeDamage = 8;
-                    weaponMidRangeMulti = 2;
+                    weaponMediumRangeDamage = 8;
+                    weaponMediumRangeMulti = 2;
 
                     weaponCQDamage = 0;
                     break;
@@ -97,8 +97,8 @@ namespace Terminal_Outbreak.Items
                     weaponLongRangeDamage = 5;
                     weaponLongRangeMulti = 0;
 
-                    weaponMidRangeDamage = 10;
-                    weaponMidRangeMulti = 0;
+                    weaponMediumRangeDamage = 10;
+                    weaponMediumRangeMulti = 0;
 
                     weaponCQDamage = 1;
                     break;
@@ -108,8 +108,8 @@ namespace Terminal_Outbreak.Items
                     weaponLongRangeDamage = 4;
                     weaponLongRangeMulti = 0;
 
-                    weaponMidRangeDamage = 5;
-                    weaponMidRangeMulti = 0;
+                    weaponMediumRangeDamage = 5;
+                    weaponMediumRangeMulti = 0;
 
                     weaponCQDamage = 3;
                     break;
@@ -119,8 +119,8 @@ namespace Terminal_Outbreak.Items
                     weaponLongRangeDamage = 1;
                     weaponLongRangeMulti = 0;
 
-                    weaponMidRangeDamage = 3;
-                    weaponMidRangeMulti = 3; // mid range damage applied to 3 enemies
+                    weaponMediumRangeDamage = 3;
+                    weaponMediumRangeMulti = 3; // mid range damage applied to 3 enemies
 
                     weaponCQDamage = 10;
                     break;

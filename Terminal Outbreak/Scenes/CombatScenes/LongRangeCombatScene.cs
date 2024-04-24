@@ -19,8 +19,8 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
         public override void Run()
         {
             roundNumber++;
-            int weaponDamage = 5;
-            int targetNumber = 3;
+            int weaponDamage = 5; // TO DO // this should changed for GETS on equipment, depending on if its Primary in long range, mid range, etc
+            int targetNumber = 3; // TO DO // this should changed for GETS on equipment, depending on if its Primary in long range, mid range, etc
 
             string header = Utils.FrameText($"Nightfall - Long Range ROUND {roundNumber}");
             string display = "";
@@ -89,7 +89,10 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
             }
 
 
-            string[] options = { "Primary Weapon", "Secondary Weapon", "None"};
+            List<string> options = new List<string>();
+            options.Add("Primary Weapon");
+            options.Add("Secondary Weapon");
+            options.Add("None");
 
             Menu resupplyResultsMenu = new Menu(display, options, header);
             int selectedIndex = resupplyResultsMenu.RunHeaderVersion();

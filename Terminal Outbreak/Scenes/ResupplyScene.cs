@@ -37,7 +37,12 @@ namespace Terminal_Outbreak.Scenes
 
             string display = Utils.WrapText($"{Environment.NewLine}{enoughTime}How much time do you want to spend looking for supplies?{Environment.NewLine}");
              
-            string[] options = { "Long Resupply Run - 8hrs", "Short Resupply Run - 4hrs", "Return"};
+
+            List<string> options = new List<string>();
+            options.Add("Long Resupply Run - 8hrs");
+            options.Add("Short Resupply Run - 4hrs");
+            options.Add("RETURN");
+
             Menu resupplyMenu = new Menu(display, options, header);
             int selectedIndex = resupplyMenu.RunHeaderVersion();
 
@@ -93,7 +98,10 @@ namespace Terminal_Outbreak.Scenes
 
                 string header = Utils.FrameText("Results");
                 string display = $"Spent {actionTime} hours looking and found {results}";
-                string[] options = { "Return To Outpost" };
+
+                List<string> options = new List<string>();
+                options.Add("RETURN");
+
 
                 Menu resupplyResultsMenu = new Menu(display, options, header);
                 int selectedIndex = resupplyResultsMenu.RunHeaderVersion();

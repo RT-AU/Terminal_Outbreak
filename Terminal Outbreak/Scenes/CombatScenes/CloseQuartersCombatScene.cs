@@ -17,8 +17,12 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
         public override void Run()
         {
             string header = Utils.FrameText("Nightfall - Close Quarters");
-            string display = $"{Environment.NewLine}XNUMBEROFZOMBIES are now within close quarters. What weapon would you like to use?{Environment.NewLine}";
-            string[] options = { "Primary Weapon", "Secondary Weapon", "Melee Weapon" };
+            string display = $"{Environment.NewLine}XNUMBEROFZOMBIES are now within close quarters. What weapon would you like to use?{Environment.NewLine}"; // TO DO // get this up and running for CQ combat
+
+            List<string> options = new List<string>();
+            options.Add("Primary Weapon");
+            options.Add("Secondary Weapon");
+            options.Add("Melee Weapon");
 
             Menu resupplyResultsMenu = new Menu(display, options, header);
             int selectedIndex = resupplyResultsMenu.RunHeaderVersion();

@@ -26,6 +26,9 @@ namespace Terminal_Outbreak.Scenes
             string trapsResults;
             int formatCounter = 0;
 
+
+
+
             foreach (var kvp in resourceList) // Display resource names and counts                                            
             {
                 if (kvp.Key == "Food Rations")
@@ -36,7 +39,7 @@ namespace Terminal_Outbreak.Scenes
                 
                 if (formatCounter == 0)
                 {
-                    results += $"{Environment.NewLine}      {kvp.Key}: {kvp.Value}";
+                    results += $"{Environment.NewLine}   {kvp.Key}: {kvp.Value}";
                     formatCounter++;
                 }
                 else if (formatCounter < 2)
@@ -46,7 +49,7 @@ namespace Terminal_Outbreak.Scenes
                 }
                 else
                 {
-                    results += $"    {kvp.Key}: {kvp.Value}";
+                    results += $"   {kvp.Key}: {kvp.Value}";
                     formatCounter = 0;
                 }
             }
@@ -56,26 +59,33 @@ namespace Terminal_Outbreak.Scenes
             }
             if (terminalOutbreakGame.baseManager.GetTrapCount() == 0)
             {
-                trapsResults = "NONE";
+                trapsResults = "TRAP NAMES ETC"; // TO DO // set up proper trap display in base
             }
             else
             {
-                trapsResults = "PUT METHOD TO FETCH TRAPS NAME HERE"; // TO DO -------------------
+                trapsResults = "NONE"; // TO DO // ------------------- triggering because traps is never 0, they exist, they just aren't set to built yet
             }
 
             string header = Utils.FrameText(terminalOutbreakGame.player.GetName() + $"'s Outpost - Day {terminalOutbreakGame.baseManager.GetDayNumber()}");
-            string display = ($"{header}{Environment.NewLine}{Environment.NewLine}Health: {terminalOutbreakGame.player.getHealth()}{Environment.NewLine}");
+            string display = ($"{header}{Environment.NewLine}Health: {terminalOutbreakGame.player.getHealth()}{Environment.NewLine}");
             
-            display += ($"Allies: 0{Environment.NewLine}");
+            display += ($"{Environment.NewLine}Allies: {terminalOutbreakGame.alliesManager.GetAllyNames()}{Environment.NewLine}");
 
-            display += ($"Food Rations: {terminalOutbreakGame.baseManager.CheckFoodRations()}{Environment.NewLine}");
+            display += ($"{Environment.NewLine}Food Rations: {terminalOutbreakGame.baseManager.CheckFoodRations()}{Environment.NewLine}");
             
             display += ($"{Environment.NewLine}Resources: {results}{Environment.NewLine}");
 
             display += ($"{Environment.NewLine}Traps: {trapsResults} {Environment.NewLine}");
 
             display += ($"{Environment.NewLine}Time remaining in day: {terminalOutbreakGame.baseManager.GetTime()} hours{Environment.NewLine}");
-            string[] options = {"Resupply", "Build/Repair", "Equipment", "Trade", "End Preparation Phase", "Exit Game"};
+
+            List<string> options = new List<string>();
+            options.Add("Resupply");
+            options.Add("Build/Repair");
+            options.Add("Equipment");
+            options.Add("Trade");
+            options.Add("End Preparation Phase");
+            options.Add("Exit Game");
 
             Menu dayMenu = new Menu(display, options);
             int selectedIndex = dayMenu.Run();
@@ -103,15 +113,18 @@ namespace Terminal_Outbreak.Scenes
                     this.Run();
                     break;
                 case 3:
-                    Console.Clear();
+                    //Console.Clear();
 
-                    Console.WriteLine("---------");
-                    Console.WriteLine("| Trade |");
-                    Console.WriteLine("---------");
-                    Console.WriteLine();
+                    //Console.WriteLine("---------");
+                    //Console.WriteLine("| Trade |");
+                    //Console.WriteLine("---------");
+                    //Console.WriteLine();
 
-                    Utils.PressEnter();
-                    this.Run();
+                    //Utils.PressEnter();
+                    //this.Run();
+
+                    terminalOutbreakGame.hireAlliesScene.Run(); // TO DO // Currently bypasses the Trade Scene
+
                     break;
                 case 4:
                     terminalOutbreakGame.enemyManager.CreateWave(terminalOutbreakGame.baseManager.GetDayNumber()); // create a wave using the enemyManger's CreateWave funtion with a parameter of the current day

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Terminal_Outbreak.Mainframe
 {
-    internal class Menu
+    internal class Menu2
     {
         private string mainTitle;
         private string initialDisplay;
         private List<string> options;
         private int selectedIndex;
 
-        public Menu(string initialDisplay, List<string> options, string mainTitle = "")
+        public Menu2(string initialDisplay, List<string> options, string mainTitle = "")
         {
             this.mainTitle = mainTitle;
             this.initialDisplay = initialDisplay;

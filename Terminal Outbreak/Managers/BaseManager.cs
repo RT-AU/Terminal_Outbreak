@@ -11,7 +11,7 @@ namespace Terminal_Outbreak.Managers
 
         private float prepTime;
         private int foodRations;
-        private List<Resource> baseResources;
+        private List<Resource> baseResources; // TO DO // Move this to the resource Manager?
         private List<Trap> traps;
         private BarrierWall barrier;
         private int dayNumber;

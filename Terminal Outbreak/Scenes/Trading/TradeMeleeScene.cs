@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Terminal_Outbreak.Mainframe;
 
-namespace Terminal_Outbreak.Scenes
+namespace Terminal_Outbreak.Scenes.Trading
 {
-    internal class TradeScene : Scene
+    internal class TradeMeleeScene : Scene
     {
-
-        public TradeScene(TerminalOutbreakGame game) : base(game)
+        public TradeMeleeScene(TerminalOutbreakGame game) : base(game)
         {
 
         }

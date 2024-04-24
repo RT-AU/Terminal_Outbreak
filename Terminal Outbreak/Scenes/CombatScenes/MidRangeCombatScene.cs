@@ -16,9 +16,14 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
 
         public override void Run()
         {
-            string header = Utils.FrameText("Nightfall - Mid Range");
-            string display = $"{Environment.NewLine}XNUMBEROFZOMBIES are approaching at mid range. What weapon would you like to use?{Environment.NewLine}";
-            string[] options = { "Primary Weapon", "Secondary Weapon", "None" };
+            string header = Utils.FrameText("Nightfall - Medium Range");
+            string display = $"{Environment.NewLine}XNUMBEROFZOMBIES are approaching at mid range. What weapon would you like to use?{Environment.NewLine}"; // TO DO // Set up MR combat
+
+            List<string> options = new List<string>();
+            options.Add("Primary Weapon");
+            options.Add("Secondary Weapon");
+            options.Add("None");
+
 
             Menu resupplyResultsMenu = new Menu(display, options, header);
             int selectedIndex = resupplyResultsMenu.RunHeaderVersion();

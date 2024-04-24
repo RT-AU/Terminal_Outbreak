@@ -10,6 +10,7 @@ using Terminal_Outbreak.Scenes;
 using Terminal_Outbreak.Scenes.CombatScenes;
 using Terminal_Outbreak.Scenes.ConstructionScenes;
 using Terminal_Outbreak.Scenes.InfoScreens;
+using Terminal_Outbreak.Scenes.Trading;
 
 namespace Terminal_Outbreak.Mainframe
 {
@@ -27,6 +28,11 @@ namespace Terminal_Outbreak.Mainframe
         public LongRangeCombatScene longRangeCombatScene;
         public MidRangeCombatScene midRangeCombatScene;
         public CloseQuartersCombatScene closeQuartersCombatScene;
+        public TradeScene tradeScene;
+        public TradePrimaryScene tradePrimaryScene;
+        public TradeSecondaryScene tradeSecondaryScene;
+        public TradeMeleeScene tradeMeleeScene;
+        public HireAlliesScene hireAlliesScene;
 
         // Initialise Player
         public Player player;
@@ -35,6 +41,7 @@ namespace Terminal_Outbreak.Mainframe
         public BaseManager baseManager;
         public ResourceManager resourceManager;
         public EnemyManager enemyManager;
+        public AlliesManager alliesManager;
 
         public TerminalOutbreakGame()
         {
@@ -50,6 +57,11 @@ namespace Terminal_Outbreak.Mainframe
             longRangeCombatScene = new LongRangeCombatScene(this);
             midRangeCombatScene = new MidRangeCombatScene(this);
             closeQuartersCombatScene = new CloseQuartersCombatScene(this);
+            tradeScene = new TradeScene(this);
+            tradePrimaryScene = new TradePrimaryScene(this);
+            tradeSecondaryScene = new TradeSecondaryScene(this);
+            tradeMeleeScene = new TradeMeleeScene(this);
+            hireAlliesScene = new HireAlliesScene(this);
 
             // Create Player Instance
             player = new Player();
@@ -58,11 +70,12 @@ namespace Terminal_Outbreak.Mainframe
             baseManager = new BaseManager();
             resourceManager = new ResourceManager();
             enemyManager = new EnemyManager();
+            alliesManager = new AlliesManager();
         }
 
         public void Start() // Run the game
         {
-            baseScene.Run();
+            titleScene.Run();
         }
 
 

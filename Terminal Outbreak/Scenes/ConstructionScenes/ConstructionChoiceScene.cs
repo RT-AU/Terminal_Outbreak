@@ -21,7 +21,12 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
 
             string header = Utils.FrameText("Construction Options");
             string display = $"{Environment.NewLine}Would you like to construct or repair a barrier, install traps, or repair the helicopter?{Environment.NewLine}";
-            string[] options = { "Construct/Repair Barrier Wall", "Install Traps", "Repair Helicopter", "Return" };
+
+            List<string> options = new List<string>();
+            options.Add("Construct/Repair Barrier Wall");
+            options.Add("Install Traps");
+            options.Add("Repair Helicopter");   
+            options.Add("RETURN");
 
             Menu resupplyResultsMenu = new Menu(display, options, header);
             int selectedIndex = resupplyResultsMenu.RunHeaderVersion();

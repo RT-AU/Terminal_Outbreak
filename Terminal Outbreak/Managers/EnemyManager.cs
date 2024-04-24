@@ -239,87 +239,10 @@ namespace Terminal_Outbreak.Managers
                 }
             }
 
-
-
-            //if (bossCount >= numberOfTargets) // if there are more or equal bosses to targets, deal damage to bosses only
-            //{
-            //    foreach (Enemy enemy in enemies)
-            //    {
-            //        if (enemy.GetEnemyID() == "boss")
-            //        {
-            //            enemy.DealDamage(damageDealt);
-            //        }
-            //        numberOfTargets--;
-            //        if (numberOfTargets == 0)
-            //        {
-            //            break;
-            //        }
-            //    }
-            //}
-            //    if (bossCount > 0) // If there are bosses, deal damage to bosses first
-            //    {
-            //        for (int i = enem)
-            //        {
-            //            if (enemy.GetEnemyID() == "boss")
-            //            {
-            //                enemy.DealDamage(damageDealt);
-            //            }
-            //            if (enemy.GetHealth() <= 0) // if enemy health is zero, remove it from the list
-            //            {
-            //                bossCount--;
-            //                bossesKilled++;
-            //                enemies.Remove(enemy);
-            //            }
-            //            numberOfTargets--;
-            //            if (numberOfTargets == 0)
-            //            {
-            //                break;
-            //            }
-            //        }
-            //        if (numberOfTargets > 0) // if there are more targets than there are bosses, deal damage to bosses first, then remaining zombies.
-            //        {
-            //            foreach (Enemy enemy in enemies)
-            //            {
-            //                if (enemy.GetEnemyID() == "zombie")
-            //                {
-            //                    enemy.DealDamage(damageDealt);
-            //                }
-            //                if (enemy.GetHealth() <= 0) // if enemy health is zero, remove it from the list
-            //                {
-            //                    zombieCount--;
-            //                    zombiesKilled++;
-            //                    enemies.Remove(enemy);
-            //                }
-            //                numberOfTargets--;
-            //                if (numberOfTargets == 0)
-            //                {
-            //                    break;
-            //                }
-            //            }
-            //        }
-            //    }
-            //    else // when there are no bosses
-            //    {
-            //        foreach (Enemy enemy in enemies)
-            //        {
-            //            enemy.DealDamage(damageDealt);
-            //            if (enemy.GetHealth() <= 0)
-            //            {
-            //                zombieCount--;
-            //                zombiesKilled++;
-            //                enemies.Remove(enemy);
-            //            }
-            //            numberOfTargets--;
-            //            if (numberOfTargets == 0)
-            //            {
-            //                break;
-            //            }
-            //        }   
-            //    }           
-            //
         }
 
-        public int RecieveDamage() // To be called each round of a "Close Quarters" encounter
+        // TO DO // Flesh this out - looks correct though?
+        public int RecieveDamage() // To be called each round of a "Close Quarters" encounter 
         {
             int damage = 0; // Calculate damage dealt to player
             foreach (Enemy enemy in enemies)
@@ -329,38 +252,7 @@ namespace Terminal_Outbreak.Managers
             return damage;
         }
 
-        //    public int GetDistance(string currentRange)
-        //    {
-        //        int distance = 0;
-        //        foreach(Enemy enemy in enemies)
-        //        {
-        //            switch (currentRange) 
-        //            {
-        //                case "LongRange":
-        //                    distance = enemy.GetLongRangeDistance();
-        //                    break;
-        //                case "MidRange":
-        //                    distance = enemy.GetLongRangeDistance();
-        //                        break;
-        //            }
-        //            break;
-        //        }
-        //        return distance;
-        //    }
-
-        //    public bool IsInCQCombat()
-        //    {
-        //        bool cQ = false;
-        //        foreach (Enemy enemy in enemies)
-        //        {
-        //            cQ = enemy.GetCloseQuarters();
-        //            break;
-        //        }
-        //        return cQ;
-        //    }
-        //}
-
-
+       
         public void ReduceLongRangeDistance()
         {
             currentLongRangeDistance -= 100;

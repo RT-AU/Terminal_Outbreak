@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terminal_Outbreak.Mainframe;
+using Terminal_Outbreak.Defences;
 
 namespace Terminal_Outbreak.Scenes.ConstructionScenes
 {
     internal class BuildTrapsScene : Scene
     {
+        private bool spikeTrapBuilt = false;
+        private bool bladeTrapBuilt = false;
+        private bool flameTrapBuilt = false;
+        private bool turretTrapBuilt = false;
 
         public BuildTrapsScene(TerminalOutbreakGame game) : base(game)
         {
@@ -20,10 +25,28 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             string header = Utils.FrameText("Build Traps");
             string display = $"The following traps are available for you to build:";
             display += $"{terminalOutbreakGame.baseManager.getTraps()}{Environment.NewLine}";
-            string[] options = { "Build Spike Trap", "Build Blade Trap", "Build Flame Trap", "Build Turret Trap", "Return" }; // will need to either work out a way to remove or just display a message when a trap has already been built
+
+            List<string> options = new List<string>();
+            if (!spikeTrapBuilt) { options.Add("Build Spike Trap"); }
+            if (!bladeTrapBuilt) { options.Add("Build Blade Trap"); }
+            if (!flameTrapBuilt) { options.Add("Build Flame Trap"); }
+            if (!turretTrapBuilt) { options.Add("Build Turret Trap"); }
+            options.Add("RETURN");
+
+            if (options.Count == 1)
+            {
+                display = Utils.WrapText($"{Environment.NewLine}There are no more traps available to build!{Environment.NewLine}");
+            }
 
             Menu resupplyResultsMenu = new Menu(display, options, header);
-            int selectedIndex = resupplyResultsMenu.RunHeaderVersion();
+            string selectedOption = resupplyResultsMenu.RunRemovable(options);
+
+            int selectedIndex = 5;
+            if (selectedOption.Contains("Spike Trap")) { selectedIndex = 0; }
+            if (selectedOption.Contains("Blade Trap")) { selectedIndex = 1; }
+            if (selectedOption.Contains("Flame Trap")) { selectedIndex = 2; }
+            if (selectedOption.Contains("Turret Trap")) { selectedIndex = 3; }
+            if (selectedOption.Contains("RETURN")) { selectedIndex = 4; }
 
             switch (selectedIndex)
             {
@@ -31,13 +54,7 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
                         terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine(Utils.FrameText("Build Traps"));
-                        Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
-                        Utils.PressEnter();
+                        spikeTrapBuilt = true;
                     }
                     Run();
                     break;
@@ -45,13 +62,7 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
                         terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine(Utils.FrameText("Build Traps"));
-                        Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
-                        Utils.PressEnter();
+                        bladeTrapBuilt = true;
                     }
                     Run();
                     break;
@@ -59,13 +70,7 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
                         terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine(Utils.FrameText("Build Traps"));
-                        Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
-                        Utils.PressEnter();
+                        flameTrapBuilt = true;
                     }
                     Run();
                     break;
@@ -73,18 +78,15 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
                         terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine(Utils.FrameText("Build Traps"));
-                        Console.WriteLine($"{Environment.NewLine}The {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} has already been built! You can only build one of each trap.{Environment.NewLine}Press enter to continue.");
-                        Utils.PressEnter();
+                        turretTrapBuilt = true;
                     }
                     Run();
                     break;
                 case 4:
                     terminalOutbreakGame.constructionChoiceScene.Run();
+                    break;                    
+                case 5:
+                    Console.WriteLine("Error in Option Selection");
                     break;
             }
 
