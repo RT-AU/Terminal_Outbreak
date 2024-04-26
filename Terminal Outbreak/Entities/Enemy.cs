@@ -32,7 +32,7 @@ namespace Terminal_Outbreak.Entities
                 
                 case "boss":
                     enemyID = enemyType;
-                    maxHealth = 30;
+                    maxHealth = 75;
                     currentHealth = maxHealth;
                     enemyDamage = 20;
                     barrierDamage = 10;

@@ -22,8 +22,8 @@ namespace Terminal_Outbreak.Scenes.Trading
             int twID = 2;
 
             int fwCost = 1;
-            int swCost = 5;
-            int twCost = 10;
+            int swCost = 15;
+            int twCost = 25;
 
             int baseRationsCount = terminalOutbreakGame.resourceManager.GetFoodRations();
 
@@ -31,16 +31,16 @@ namespace Terminal_Outbreak.Scenes.Trading
             bool swOwned = terminalOutbreakGame.equipmentManager.IsWeaponOwned(swID);
             bool twOwned = terminalOutbreakGame.equipmentManager.IsWeaponOwned(twID);
 
-            string firstWeaponName = terminalOutbreakGame.equipmentManager.GetWeaponName(fwID); // rifle
-            string secondWeaponName = terminalOutbreakGame.equipmentManager.GetWeaponName(swID); // sniper
-            string thirdWeaponName = terminalOutbreakGame.equipmentManager.GetWeaponName(twID); // HMG
+            string firstWeaponName = terminalOutbreakGame.equipmentManager.GetWeaponName(fwID); // bat
+            string secondWeaponName = terminalOutbreakGame.equipmentManager.GetWeaponName(swID); // sword
+            string thirdWeaponName = terminalOutbreakGame.equipmentManager.GetWeaponName(twID); // chainsaw
 
             string firstWeaponDescription = terminalOutbreakGame.equipmentManager.GetWeaponDescription(fwID);
             string secondWeaponDescription = terminalOutbreakGame.equipmentManager.GetWeaponDescription(swID);
             string thirdWeaponDescription = terminalOutbreakGame.equipmentManager.GetWeaponDescription(twID);
 
             // set up menu
-            string header = Utils.FrameText("Purchase Primary Weapons");
+            string header = Utils.FrameText("Purchase Melee Weapons");
             string display = string.Empty;
             if (fwOwned == true && swOwned == true && twOwned == true)
             {

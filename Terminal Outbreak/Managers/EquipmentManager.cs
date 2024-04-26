@@ -22,8 +22,7 @@ namespace Terminal_Outbreak.Managers
             }
         }
 
-
-        public List<Weapon> GetEquipmentList() // TO DO // Set this up to be used, and make sure it actually works how I would want it to.
+        public List<Weapon> GetEquipmentList() 
         {
             return equipment;
         }

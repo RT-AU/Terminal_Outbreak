@@ -15,6 +15,7 @@ namespace Terminal_Outbreak.Scenes.Trading
         private bool stevenHired = false;
         private bool nateHired = false;
         private bool mayaHired = false;
+        
 
         public HireAlliesScene(TerminalOutbreakGame game) : base(game)
         {
@@ -24,10 +25,10 @@ namespace Terminal_Outbreak.Scenes.Trading
 
         public override void Run()
         {
-            int isabellaHireCost = 5;
-            int stevenHireCost = 5;
-            int nateHireCost = 10;
-            int mayaHireCost = 10;
+            int isabellaHireCost = 20;
+            int stevenHireCost = 20;
+            int nateHireCost = 30;
+            int mayaHireCost = 30;
 
             int baseRationsCount = terminalOutbreakGame.resourceManager.GetFoodRations();
 
@@ -75,11 +76,12 @@ namespace Terminal_Outbreak.Scenes.Trading
                     {
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText("Isabella Hired"));
-                        Console.WriteLine($"{Environment.NewLine}You hired Isabella! From now on she will help you in battle, but make sure you keep an eye on your rations! {Environment.NewLine}Press ENTER to continue."); // TO DO // Detail consequences here once they are done
+                        Console.WriteLine($"{Environment.NewLine}You hired Isabella! From now on she will help you in battle, but make sure you keep an eye on your rations!{Environment.NewLine}Press ENTER to continue."); 
                         Utils.PressEnter();
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, isabellaHireCost);
                         terminalOutbreakGame.alliesManager.HireAlly(selectedIndex);
                         isabellaHired = true;
+                        terminalOutbreakGame.resourceManager.IncreaseRationConsumption();
                     }
                     this.Run();
                     break;
@@ -95,11 +97,12 @@ namespace Terminal_Outbreak.Scenes.Trading
                     {
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText("Steven Hired"));
-                        Console.WriteLine($"{Environment.NewLine}You hired Steven! From now on he will help you in battle, but make sure you keep an eye on your rations! {Environment.NewLine}Press ENTER to continue."); // TO DO // Detail consequences here once they are done
+                        Console.WriteLine($"{Environment.NewLine}You hired Steven! From now on he will help you in battle, but make sure you keep an eye on your rations! {Environment.NewLine}Press ENTER to continue."); 
                         Utils.PressEnter();
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, stevenHireCost);
                         terminalOutbreakGame.alliesManager.HireAlly(selectedIndex);
                         stevenHired = true;
+                        terminalOutbreakGame.resourceManager.IncreaseRationConsumption();
                     }
                     this.Run();
                     break;
@@ -115,11 +118,12 @@ namespace Terminal_Outbreak.Scenes.Trading
                     {
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText("Nathaniel Hired"));
-                        Console.WriteLine($"{Environment.NewLine}You hired Nathaniel! From now on he will help you in battle, but make sure you keep an eye on your rations! {Environment.NewLine}Press ENTER to continue."); // TO DO // Detail consequences here once they are done
+                        Console.WriteLine($"{Environment.NewLine}You hired Nathaniel! From now on he will help you in battle, but make sure you keep an eye on your rations! {Environment.NewLine}Press ENTER to continue."); 
                         Utils.PressEnter();
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, nateHireCost);
                         terminalOutbreakGame.alliesManager.HireAlly(selectedIndex);
                         nateHired = true;
+                        terminalOutbreakGame.resourceManager.IncreaseRationConsumption();
                     }
                     this.Run();
                     break;
@@ -135,11 +139,12 @@ namespace Terminal_Outbreak.Scenes.Trading
                     {
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText("Maya Hired"));
-                        Console.WriteLine($"{Environment.NewLine}You hired Maya! From now on she will help you in battle, but make sure you keep an eye on your rations! {Environment.NewLine}Press ENTER to continue."); // TO DO // Detail consequences here once they are done
+                        Console.WriteLine($"{Environment.NewLine}You hired Maya! From now on she will help you in battle, but make sure you keep an eye on your rations! {Environment.NewLine}Press ENTER to continue."); 
                         Utils.PressEnter();
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, mayaHireCost);
                         terminalOutbreakGame.alliesManager.HireAlly(selectedIndex);
                         mayaHired = true;
+                        terminalOutbreakGame.resourceManager.IncreaseRationConsumption();
                     }
                     this.Run();
                     break;

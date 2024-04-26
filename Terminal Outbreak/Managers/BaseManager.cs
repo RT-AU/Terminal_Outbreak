@@ -8,29 +8,29 @@ namespace Terminal_Outbreak.Managers
     // Class which handles the base resources
     internal class BaseManager
     {
-
         private float prepTime;
-        private int foodRations;
-        // private List<Resource> baseResources; // TO DO // Move this to the resource Manager?
         private List<Trap> traps;
-        private BarrierWall barrier;
+        private bool barrierBuilt;
+        private bool barrierDestroyed;
+        private int barrierHealth;
         private int dayNumber;
+        private bool helicopterFixed;
 
         public BaseManager()
         {
             prepTime = 12.0f;
-            foodRations = 5;
             dayNumber = 1;
-            // baseResources = new List<Resource>();
             traps = new List<Trap>();
-            barrier = new BarrierWall();
+            barrierBuilt = false;
+            barrierHealth = 5;
+            barrierDestroyed = false;
+            helicopterFixed = false;
 
             for (int i = 0; i <= 3; i++) 
             {
                 traps.Add(new Trap(i));
             }
         }
-
 
         public void ReduceTime(float time)
         {
@@ -47,20 +47,9 @@ namespace Terminal_Outbreak.Managers
             return prepTime;
         }
 
-        public int CheckFoodRations()
+        public List<Trap> GetTrapList()
         {
-            return foodRations;
-        }
-
-       
-
-        public void IncreaseFoodRations(int amount)
-        {
-            foodRations += amount;
-        }
-        public void DecreaseFoodRations(int amount)
-        {
-            foodRations -= amount;
+            return traps;
         }
 
         public int GetDayNumber()
@@ -88,62 +77,130 @@ namespace Terminal_Outbreak.Managers
         {
             return traps[trapID];
         }
-        public string getTraps()
+        public string GetTraps()
         {
             string trapString = "";
             for (int i = 0; i < traps.Count; i++)
             {
                 if (traps[i].IsBuilt() == false)
                 {
-                    
-                    if (traps[i].GetResourceRequired() != "NONE")
+
+                    if (traps[i].GetLRDamage() == 0)
                     {
-                        string resourceRequired = traps[i].GetResourceRequired();
-                        int resourceQuantity = traps[i].GetResourceRequiredQuanitity();
-                        trapString += $"{Environment.NewLine}{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage and uses {resourceQuantity} {resourceRequired} every night)";
+                        trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Trap placed at Medium Range which deals {traps[i].GetMRDamage()} damage to {traps[i].GetMulti()} enemies)";
+                    }
+                    else if (traps[i].GetMRDamage() == 0)
+                    {
+
+                        trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Trap placed at Long Range which deals {traps[i].GetLRDamage()} damage to {traps[i].GetMulti()} enemies)";
                     }
                     else
                     {
-                        trapString += $"{Environment.NewLine}{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage)";
+                        trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Trap effective at both Long and Medium range, and deals {traps[i].GetLRDamage()} Damage to {traps[i].GetMulti()} enemies)";
                     }
+
+                    //if (traps[i].GetResourceRequired() != "NONE") // FOR NOW, TRAP RESOURCES WILL BE REMOVED
+                    //{
+                    //    string resourceRequired = traps[i].GetResourceRequired();
+                    //    int resourceQuantity = traps[i].GetResourceRequiredQuanitity();
+                    //    trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage to {traps[i].GetMulti()} enemies and uses {resourceQuantity} {resourceRequired} every night)";
+                    //}
+                    //else
+                    //{
+                    //    trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage to {traps[i].GetMulti()} enemies)";
+                    //}
                     
-                    trapString += $"{Environment.NewLine}{traps[i].GetRecipe()}";
+                    Dictionary<int, int> trapRecipes = traps[i].GetRecipe(); // fetches the recipe of the traps
+                    string recipe = string.Empty;
+                    
+                    foreach (var trapRecipe in trapRecipes) 
+                    {
+                        Resource resource = new Resource(trapRecipe.Key);
+                        recipe += $"{trapRecipe.Value} {resource.GetResourceName()}{Environment.NewLine}";
+                        //recipe += resource.GetResourceName();
+                    }
+
+                    //trapString += $"{Environment.NewLine}{traps[i].GetRecipe()}";
+                    trapString += $"{Environment.NewLine}{recipe}";
                 }
             }
             return trapString;
         }
-
+        public string GetBuiltTrapsNames()
+        {
+            string builtTrapsNames = $"{Environment.NewLine}    ";
+            int trapCounter = 0;
+            for (int i = 0; i < traps.Count; i++)
+            {
+                if (traps[i].IsBuilt())
+                {
+                    trapCounter++;
+                    if (trapCounter > 1)
+                    {
+                        builtTrapsNames += ", ";
+                    }
+                    if (trapCounter == 3)
+                    {
+                        builtTrapsNames += $"{Environment.NewLine}    ";
+                    }
+                    builtTrapsNames += $"{traps[i].GetTrapName()}";
+                }
+            }
+            if (trapCounter == 0)
+            {
+                builtTrapsNames = "NONE";
+            }
+            return builtTrapsNames;
+        }
         public int GetTrapCount()
         {
             return traps.Count;
         }
 
-        //public void IncreaseResources(List<Resource> gatheredResources) // TO DO // happens automatically now when resources are found
-        //{
-        //    foreach (Resource resource in gatheredResources)
-        //    {
-        //        baseResources.Add(resource);
-        //    }
-        //}
+        public void SetHelicopterFixed()
+        {
+            helicopterFixed = true;
+        }
 
-        //public Dictionary<string, int> GetResourceList()
-        //{
-        //    Dictionary<string, int> resourceList = new Dictionary<string, int>();
+        public bool IsHelicopterFixed()
+        {
+            return helicopterFixed;
+        }
 
-        //    foreach (Resource resource in baseResources)
-        //    {
-        //        // If resource name exists in dictionary, increment its count
-        //        if (resourceList.ContainsKey(resource.GetResourceName()))
-        //        {
-        //            resourceList[resource.GetResourceName()]++;
-        //        }
-        //        // Otherwise, add the resource name to the dictionary with count 1
-        //        else
-        //        {
-        //            resourceList[resource.GetResourceName()] = 1;
-        //        }
-        //    }
-        //    return resourceList;
-        //}
+        public bool IsBarrierBuilt()
+        {
+            return barrierBuilt;
+        }
+        
+        public void BuildBarrer()
+        {
+            barrierBuilt = true;
+        }
+        public void DamageBarrier()
+        {
+            barrierHealth--;
+        }
+        public void ResetBarrierHealth()
+        {
+            barrierHealth = 5;
+        }
+        public int GetBarrierHealth()
+        { 
+            return barrierHealth; 
+        }
+        public bool IsBarrierDestroyed()
+        {
+            return barrierDestroyed;
+        }
+        public void DestroyBarrier()
+        {
+            barrierDestroyed = true;
+        }
+
+        public void RepairBarrier()
+        {
+            barrierDestroyed = false;
+            ResetBarrierHealth();
+        }
     }
 }

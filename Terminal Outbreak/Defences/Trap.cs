@@ -12,35 +12,37 @@ namespace Terminal_Outbreak.Defences
     {
 
         private int trapID;
-        private string trapName ="default";
-        private int trapDamage;
+        private string trapName = "default";
+        private int trapLRDamage;
+        private int trapMRDamage;
+        private int trapMulti;
         private int trapMaxHealth;
         private int trapHealth;
-        private int trapIsDestroyed;
         private bool trapRequiresResource;
         private string resourceRequired = "N/A";
         private int resourceRequiredQuantity;
         private bool behindWall;
-        private Dictionary<string, int> recipe;
-        private string[] ingredientsArray = ["wood", "metal", "pipes", "fuel", "gun parts"];
+        private Dictionary<int, int> recipe;
+        private int[] ingredientsArray = [1, 2, 4, 5, 3, 6]; // wood, metal, ammunition, pipes, fuel, gun parts
         private bool isBuilt;
 
 
         public Trap(int id) 
         {
             trapID = id;
-            recipe = new Dictionary<string, int>();
+            recipe = new Dictionary<int, int>();
             switch (trapID)
             {
                 case 0:
                     trapName = "Spike Trap";
                     trapMaxHealth = 10;
                     trapHealth = 10;
-                    trapDamage = 10;
-                    trapIsDestroyed = 0;
+                    trapLRDamage = 5;
+                    trapMRDamage = 0;
+                    trapMulti = 5;
                     trapRequiresResource = false;
                     behindWall = false;
-                    recipe.Add("wood", 5);
+                    recipe.Add(1, 15); // 5x wood
 
                     isBuilt = false;
                     break;
@@ -48,13 +50,14 @@ namespace Terminal_Outbreak.Defences
                 case 1:
                     trapName = "Blade Trap";
                     trapMaxHealth = 10;
-                    trapHealth = 10;
-                    trapDamage = 15;
-                    trapIsDestroyed = 0;
+                    trapHealth = 5;
+                    trapLRDamage = 15;
+                    trapMRDamage = 0;
+                    trapMulti = 10;
                     trapRequiresResource = false;
                     behindWall = false;
-                    recipe.Add("wood", 5);
-                    recipe.Add("metal", 5);
+                    recipe.Add(1, 15); // 5x wood
+                    recipe.Add(2, 15); // 5x metal
 
                     isBuilt = false;
                     break;
@@ -63,15 +66,16 @@ namespace Terminal_Outbreak.Defences
                     trapName = "Flame Trap";
                     trapMaxHealth = 10;
                     trapHealth = 10;
-                    trapDamage = 20;
-                    trapIsDestroyed = 0;
+                    trapLRDamage = 0;
+                    trapMRDamage = 10;
+                    trapMulti = 25;
                     trapRequiresResource = true;
                     resourceRequired = "Fuel";
                     resourceRequiredQuantity = 2;
                     behindWall = true;
-                    recipe.Add("metal", 5);
-                    recipe.Add("pipes", 2);
-                    recipe.Add("barrel", 1);
+                    recipe.Add(2, 30); // 5x metal
+                    recipe.Add(5, 20); // 2x pipes
+                    recipe.Add(3, 10); // 1x fuel canister
 
                     isBuilt = false;
                     break;
@@ -80,14 +84,16 @@ namespace Terminal_Outbreak.Defences
                     trapName = "Sentry Turret";
                     trapMaxHealth = 10;
                     trapHealth = 10;
-                    trapDamage= 25;
-                    trapIsDestroyed = 0;
+                    trapLRDamage= 25;
+                    trapMRDamage = trapLRDamage;
+                    trapMulti = 10;
                     trapRequiresResource = true;
                     resourceRequired = "Ammunition";
                     resourceRequiredQuantity = 5;
                     behindWall = true;
-                    recipe.Add("metal", 10);
-                    recipe.Add("gun parts", 10);
+                    recipe.Add(2, 25); // 10x metal
+                    recipe.Add(6, 15); // 10x gun parts
+                    recipe.Add(4, 20); // 15x Ammunition
 
                     isBuilt = false;
                     break;
@@ -127,9 +133,18 @@ namespace Terminal_Outbreak.Defences
             return trapHealth;
         }
 
-        public int GetDamage()
+        public int GetLRDamage()
         {
-            return trapDamage;
+            return trapLRDamage;
+        }
+        public int GetMRDamage()
+        {
+            return trapMRDamage;
+        }
+
+        public int GetMulti()
+        {
+            return trapMulti;
         }
 
         public string GetResourceRequired()
@@ -156,19 +171,9 @@ namespace Terminal_Outbreak.Defences
             }
         }
 
-        public string GetRecipe()
+        public Dictionary<int, int> GetRecipe()
         {
-            string ingredients = "Required Materials:";
-            foreach (string ingredient in ingredientsArray)
-            {
-                if (recipe.ContainsKey(ingredient))
-                {
-                    ingredients += $"{Environment.NewLine}  {recipe[ingredient]} {ingredient}";
-                }
-               
-            }
-            return ingredients;
-
+            return recipe;
         }
 
     }

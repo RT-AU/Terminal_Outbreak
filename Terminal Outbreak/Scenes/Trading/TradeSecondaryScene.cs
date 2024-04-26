@@ -22,8 +22,8 @@ namespace Terminal_Outbreak.Scenes.Trading
             int twID = 8;
 
             int fwCost = 5;
-            int swCost = 8;
-            int twCost = 14;
+            int swCost = 15;
+            int twCost = 25;
 
             int baseRationsCount = terminalOutbreakGame.resourceManager.GetFoodRations();
 
@@ -40,7 +40,7 @@ namespace Terminal_Outbreak.Scenes.Trading
             string thirdWeaponDescription = terminalOutbreakGame.equipmentManager.GetWeaponDescription(twID);
 
             // set up menu
-            string header = Utils.FrameText("Purchase Primary Weapons");
+            string header = Utils.FrameText("Purchase Secondary Weapons");
             
             string display = string.Empty;
             if (fwOwned == true && swOwned == true && twOwned == true)
@@ -90,7 +90,7 @@ namespace Terminal_Outbreak.Scenes.Trading
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, fwCost);
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText($"{firstWeaponName} Obtained"));
-                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of a {firstWeaponName}!{Environment.NewLine}");
+                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of the {firstWeaponName}!{Environment.NewLine}");
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
@@ -111,7 +111,7 @@ namespace Terminal_Outbreak.Scenes.Trading
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, swCost);
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText($"{secondWeaponName} Obtained"));
-                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of a {secondWeaponName}!{Environment.NewLine}{Environment.NewLine}");
+                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of the {secondWeaponName}!{Environment.NewLine}{Environment.NewLine}");
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
@@ -131,7 +131,7 @@ namespace Terminal_Outbreak.Scenes.Trading
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, twCost);
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText($"{thirdWeaponName} Obtained"));
-                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of a {thirdWeaponName}!{Environment.NewLine}");
+                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of the {thirdWeaponName}!{Environment.NewLine}");
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }

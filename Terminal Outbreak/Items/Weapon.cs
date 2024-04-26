@@ -18,7 +18,6 @@ namespace Terminal_Outbreak.Items
         private int weaponMediumRangeMulti;
         private int weaponCQDamage;
         private int weaponCQMulti;
-        private string requiresResource;
         private string description;
         private bool owned;
 
@@ -27,7 +26,7 @@ namespace Terminal_Outbreak.Items
             weaponID = ID;
             weaponName = "default";
             weaponType = "default";
-            // requiresResource = "none"; // Probably just remove
+
             weaponLongRangeDamage = 0;
             weaponLongRangeMulti = 1; // weapons should always attack at least 1 enemy, unless otherwise specified
             weaponMediumRangeDamage = 0;
@@ -44,23 +43,22 @@ namespace Terminal_Outbreak.Items
                     weaponType = "Melee";
 
                     weaponCQDamage = 5;
+                    weaponCQMulti = 1;
                     description = Utils.WrapText($"Its a bat and it can only be used in close quarters, so it's pretty last-season. It deals {weaponCQDamage} damage to a single enemy every round.");
                     break;
                 case 1:
                     weaponName = "Sword";
                     weaponType = "Melee";
                     weaponCQDamage = 10;
-                    weaponCQMulti = 5; 
+                    weaponCQMulti = 10; 
                     description = Utils.WrapText($"Its a sword that only be used in close quarters...but it's a freakin' sword. It deals {weaponCQDamage} damage to {weaponCQMulti} enemies every round.");
                     break;
                 case 2:
                     weaponName = "Chainsaw";
                     weaponType = "Melee";
 
-                    weaponCQDamage = 15;
-                    weaponCQMulti = 10; 
-
-                    // requiresResource = "Fuel";
+                    weaponCQDamage = 25;
+                    weaponCQMulti = 25; 
 
                     description = Utils.WrapText($"If it can fell trees, it can fell these! (Zombies, that is). In close quarters it deals {weaponCQDamage} damage to {weaponCQMulti} enemies every round.");
                     break;
@@ -81,7 +79,7 @@ namespace Terminal_Outbreak.Items
                 case 4:
                     weaponName = "Sniper Rifle";
                     weaponType = "Primary";
-                    weaponLongRangeDamage = 20;
+                    weaponLongRangeDamage = 25;
                     weaponLongRangeMulti = 5;
 
                     weaponMediumRangeDamage = 0;
@@ -107,28 +105,28 @@ namespace Terminal_Outbreak.Items
                 case 6:
                     weaponName = "Revolver";
                     weaponType = "Secondary";
-                    weaponLongRangeDamage = 8;
+                    weaponLongRangeDamage = 3;
                     weaponLongRangeMulti = 6;
 
                     weaponMediumRangeDamage = 10;
-                    weaponMediumRangeMulti = 5;
+                    weaponMediumRangeMulti = 6;
 
                     weaponCQDamage = 5;
                     weaponCQMulti = 1;
-                    description = Utils.WrapText($"It slow and clunky, but it hits hard and the accuracy isn't bad. Feel like a cowboy as you deal {weaponLongRangeDamage} to {weaponLongRangeMulti} outlaws at long range. When they get closer, unleash a whole {weaponMediumRangeDamage} damage to {weaponMediumRangeMulti} of em. Might want to try something else for Melee though, as you aren't going to hit more than {weaponCQMulti} of 'em for {weaponCQDamage} damage.");
+                    description = Utils.WrapText($"It slow and clunky, but its all about the aesthetic. Bask in that wild-west nostalgia as you deal {weaponLongRangeDamage} damage to {weaponLongRangeMulti} outlaws at long range. When they get closer, unleash a whole {weaponMediumRangeDamage} damage to {weaponMediumRangeMulti} of 'em. Might want to try something else for Melee though, as you aren't going to hit more than {weaponCQMulti} of 'em for {weaponCQDamage} damage.");
                     break;
                 case 7:
-                    weaponName = "Pistol";
+                    weaponName = "Agent Pistol";
                     weaponType = "Secondary";
                     weaponLongRangeDamage = 5;
                     weaponLongRangeMulti = 2;
 
-                    weaponMediumRangeDamage = 8;
-                    weaponMediumRangeMulti = 4;
+                    weaponMediumRangeDamage = 10;
+                    weaponMediumRangeMulti = 16;
 
                     weaponCQDamage = 3;
-                    weaponCQMulti = 1;
-                    description = Utils.WrapText($"Standard issue secret-agent pistol. Gets the job done, but the really cool spies probably use something better. Deals {weaponLongRangeDamage} damage to {weaponLongRangeMulti} enemies at long range, and {weaponMediumRangeDamage} damage to {weaponMediumRangeMulti} enemies. It's hard to look cool with zombie breath in your face, you'll only deal {weaponCQDamage} damage to {weaponCQMulti} enemy in close quarters.");
+                    weaponCQMulti = 2;
+                    description = Utils.WrapText($"Standard issue secret-agent pistol. Gets the job done, but the really cool spies probably use something better. Deals {weaponLongRangeDamage} damage to {weaponLongRangeMulti} enemies at long range, and {weaponMediumRangeDamage} damage to {weaponMediumRangeMulti} enemies at medium range. Unfortunately it's hard to look cool with zombie breath in your face, so you'll only deal {weaponCQDamage} damage to {weaponCQMulti} enemies in close quarters.");
                     break;
                 case 8:
                     weaponName = "Sawn-Off Shotgun";
@@ -136,12 +134,12 @@ namespace Terminal_Outbreak.Items
                     weaponLongRangeDamage = 1;
                     weaponLongRangeMulti = 10;
 
-                    weaponMediumRangeDamage = 8;
+                    weaponMediumRangeDamage = 25;
                     weaponMediumRangeMulti = 8;
 
                     weaponCQDamage = 15;
                     weaponCQMulti = 1;
-                    description = Utils.WrapText($"Short in both stature and temper, the sawn-off will do basically nothing at long range, dealing {weaponLongRangeDamage} damage to {weaponLongRangeMulti} enemies. But when they get to medium range you'll hit {weaponMediumRangeMulti} of them for {weaponMediumRangeDamage} damage apiece. If they get closer than that, you're only going to hit {weaponCQMulti} of them, but you'll deal a whopping {weaponCQDamage} damage!");
+                    description = Utils.WrapText($"Short in stature, the sawn-off will do basically nothing at long range, dealing {weaponLongRangeDamage} damage to {weaponLongRangeMulti} enemies. But once they're in medium range you'll hit {weaponMediumRangeMulti} of them for {weaponMediumRangeDamage} damage apiece. If they get closer than that, you're only going to hit {weaponCQMulti} of them, but you'll deal a whopping {weaponCQDamage} damage!");
                     break;
 
             }

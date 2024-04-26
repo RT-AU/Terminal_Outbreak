@@ -11,22 +11,20 @@ namespace Terminal_Outbreak.Managers
 {
     internal class ResourceManager
     {
-        private List<Resource> baseResources; // TO DO // Move this to the resource Manager?
+        private List<Resource> baseResources; 
 
         private int[] lootTable;
-
-
-
         private Random random;
         private int total;
+        private int rationConsumption;
 
         public ResourceManager()
         {
             baseResources = new List<Resource>();
             lootTable = 
-                [30, // Food chance
-                25, // Wood chance
-                20, // Metal chance
+                [40, // Food chance
+                30, // Wood chance
+                28, // Metal chance
                 18, // Fuel Barrel chance
                 15, // Ammunition chance
                 10, // Pipes chance
@@ -36,11 +34,26 @@ namespace Terminal_Outbreak.Managers
                 ];
 
             random = new Random();
+            rationConsumption = 1;
 
             for (int i = 0; i < 5; i++) // gives the player 5 rations to start with
             {
                 baseResources.Add(new Resource(0));
             }
+        }
+        public void IncreaseRationConsumption()
+        {
+            rationConsumption++;
+        }
+        public int GetRationConsumption()
+        {
+            return rationConsumption;
+        }
+
+        public void ConsumeRations()
+        {
+            int rations = GetFoodRations();
+            rations -= rationConsumption;
         }
 
         public List<Resource> GetBaseResources()
@@ -114,25 +127,6 @@ namespace Terminal_Outbreak.Managers
             return rationsCount;
         }
 
-        //public Dictionary<string, int> GetResourceList()
-        //{
-        //    Dictionary<string, int> resourceList = new Dictionary<string, int>();
-
-        //    foreach (Resource resource in baseResources)
-        //    {
-        //        // If resource name exists in dictionary, increment its count
-        //        if (resourceList.ContainsKey(resource.GetResourceName()))
-        //        {
-        //            resourceList[resource.GetResourceName()]++;
-        //        }
-        //        // Otherwise, add the resource name to the dictionary with count 1
-        //        else
-        //        {
-        //            resourceList[resource.GetResourceName()] = 1;
-        //        }
-        //    }
-        //    return resourceList;
-        //}
 
         public string GetResources()
         {
@@ -147,15 +141,15 @@ namespace Terminal_Outbreak.Managers
                 {
                     continue;
                 }
-                
-                resources += ($"{resource.Name}: {resource.Count}".PadRight(20));
-                formatCounter++;
-                
                 if (formatCounter == 3)
                 {
                     resources += $"{Environment.NewLine}    ";
                     formatCounter = 0;
                 }
+                resources += ($"{resource.Name}: {resource.Count}".PadRight(20));
+                formatCounter++;
+                
+
             }
 
             bool allFood = baseResources.All(r => r.GetResourceID() == 0); // checks to make sure that only food exists in the resource list because food is given its own display

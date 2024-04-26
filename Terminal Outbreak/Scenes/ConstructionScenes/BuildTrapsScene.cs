@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terminal_Outbreak.Mainframe;
 using Terminal_Outbreak.Defences;
+using Terminal_Outbreak.Items;
 
 namespace Terminal_Outbreak.Scenes.ConstructionScenes
 {
@@ -23,8 +24,8 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
         {
 
             string header = Utils.FrameText("Build Traps");
-            string display = $"The following traps are available for you to build:";
-            display += $"{terminalOutbreakGame.baseManager.getTraps()}{Environment.NewLine}";
+            string display = $"The following traps are available for you to build:{Environment.NewLine}";
+            display += $"{terminalOutbreakGame.baseManager.GetTraps()}{Environment.NewLine}";
 
             List<string> options = new List<string>();
             if (!spikeTrapBuilt) { options.Add("Build Spike Trap"); }
@@ -53,32 +54,202 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                 case 0:
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
-                        terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                        spikeTrapBuilt = true;
+                        Dictionary<int, int> recipe = terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetRecipe();
+                        bool enoughResources = true;
+                        int resourceID;
+                        int quantity;
+
+                        foreach (var ingredient in recipe)
+                        {
+                            resourceID = ingredient.Key;
+                            quantity = ingredient.Value;
+
+                            // Count the number of resources with the given ID
+                            int resourceCount = terminalOutbreakGame.resourceManager.GetBaseResources().Count(r => r.GetResourceID() == resourceID);
+                            
+
+                            if (resourceCount < quantity)
+                            {
+                                enoughResources = false;
+                                
+                            }
+                            
+                        }
+
+                        if (enoughResources == false)
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Construction Failed"));
+                            Console.WriteLine($"{Environment.NewLine}Not enough resources to construct {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()}!{Environment.NewLine}");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Built!"));
+                            Console.WriteLine($"{Environment.NewLine}{terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} successfully constructed!");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                            foreach (var ingredient in recipe)
+                            {
+                                resourceID = ingredient.Key;
+                                quantity = ingredient.Value;
+                                terminalOutbreakGame.resourceManager.ReduceResourceQuantity(resourceID, quantity);
+                            }
+                            terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
+                            spikeTrapBuilt = true;
+                        }
+                        
                     }
                     Run();
                     break;
                 case 1:
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
-                        terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                        bladeTrapBuilt = true;
+                        Dictionary<int, int> recipe = terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetRecipe();
+                        bool enoughResources = true;
+                        int resourceID;
+                        int quantity;
+
+                        foreach (var ingredient in recipe)
+                        {
+                            resourceID = ingredient.Key;
+                            quantity = ingredient.Value;
+
+                            // Count the number of resources with the given ID
+                            int resourceCount = terminalOutbreakGame.resourceManager.GetBaseResources().Count(r => r.GetResourceID() == resourceID);
+
+                            if (resourceCount < quantity)
+                            {
+                                enoughResources = false;
+
+                            }
+                        }
+                        if (enoughResources == false)
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Construction Failed"));
+                            Console.WriteLine($"{Environment.NewLine}Not enough resources to construct {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()}!{Environment.NewLine}");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Built!"));
+                            Console.WriteLine($"{Environment.NewLine}{terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} successfully constructed!");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                            foreach (var ingredient in recipe)
+                            {
+                                resourceID = ingredient.Key;
+                                quantity = ingredient.Value;
+                                terminalOutbreakGame.resourceManager.ReduceResourceQuantity(resourceID, quantity);
+                            }
+                            
+                            terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
+                            bladeTrapBuilt = true;
+                        }
+
                     }
                     Run();
                     break;
                 case 2:
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
-                        terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                        flameTrapBuilt = true;
+                        Dictionary<int, int> recipe = terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetRecipe();
+                        bool enoughResources = true;
+                        int resourceID;
+                        int quantity;
+
+                        foreach (var ingredient in recipe)
+                        {
+                            resourceID = ingredient.Key;
+                            quantity = ingredient.Value;
+
+                            // Count the number of resources with the given ID
+                            int resourceCount = terminalOutbreakGame.resourceManager.GetBaseResources().Count(r => r.GetResourceID() == resourceID);
+
+                            if (resourceCount < quantity)
+                            {
+                                enoughResources = false;
+
+                            }
+                        }
+                        if (enoughResources == false)
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Construction Failed"));
+                            Console.WriteLine($"{Environment.NewLine}Not enough resources to construct {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()}!{Environment.NewLine}");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Built!"));
+                            Console.WriteLine($"{Environment.NewLine}{terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} successfully constructed!");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                            foreach (var ingredient in recipe)
+                            {
+                                resourceID = ingredient.Key;
+                                quantity = ingredient.Value;
+                                terminalOutbreakGame.resourceManager.ReduceResourceQuantity(resourceID, quantity);
+                            }
+                            terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
+                            flameTrapBuilt = true;
+                        }
                     }
                     Run();
                     break;
                 case 3:
                     if (terminalOutbreakGame.baseManager.GetTrap(selectedIndex).IsBuilt() == false)
                     {
-                        terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
-                        turretTrapBuilt = true;
+                        Dictionary<int, int> recipe = terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetRecipe();
+                        bool enoughResources = true;
+                        int resourceID;
+                        int quantity;
+
+                        foreach (var ingredient in recipe)
+                        {
+                            resourceID = ingredient.Key;
+                            quantity = ingredient.Value;
+
+                            // Count the number of resources with the given ID
+                            int resourceCount = terminalOutbreakGame.resourceManager.GetBaseResources().Count(r => r.GetResourceID() == resourceID);
+
+                            if (resourceCount < quantity)
+                            {
+                                enoughResources = false;
+
+                            }
+                        }
+                        if (enoughResources == false)
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Construction Failed"));
+                            Console.WriteLine($"{Environment.NewLine}Not enough resources to construct {terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()}!{Environment.NewLine}");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine(Utils.FrameText("Trap Built!"));
+                            Console.WriteLine($"{Environment.NewLine}{terminalOutbreakGame.baseManager.GetTrap(selectedIndex).GetTrapName()} successfully constructed!");
+                            Console.WriteLine("Press ENTER to Continue");
+                            Utils.PressEnter();
+                            foreach (var ingredient in recipe)
+                            {
+                                resourceID = ingredient.Key;
+                                quantity = ingredient.Value;
+                                terminalOutbreakGame.resourceManager.ReduceResourceQuantity(resourceID, quantity);
+                            }
+                            terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
+                            turretTrapBuilt = true;
+                        }
                     }
                     Run();
                     break;

@@ -29,13 +29,16 @@ namespace Terminal_Outbreak.Managers
         public void CreateWave(int waveNumber)
         {
             enemies.Clear();
-            zombiesKilled = 0;
+            zombieCount = 0;
             bossCount = 0;
+            zombiesKilled = 0;
+            bossesKilled = 0;
+            
             switch (waveNumber)
             {
                 case 1:
                     zombieCount = 5;
-                    bossCount = 1;                      // TO DO // REset to 0 bosses
+                    bossCount = 0;                      
                     break;
 
                 case 2:
@@ -79,58 +82,82 @@ namespace Terminal_Outbreak.Managers
                     break;
 
                 case 10:
-                    zombieCount = 35;
+                    zombieCount = 50;
                     bossCount = 2;
                     break;
 
                 case 11:
-                    zombieCount = 40;
+                    zombieCount = 60;
                     bossCount = 0;
                     break;
 
                 case 12:
-                    zombieCount = 45;
+                    zombieCount = 70;
                     bossCount = 0;
                     break;
 
                 case 13:
-                    zombieCount = 50;
+                    zombieCount = 80;
                     bossCount = 0;
                     break;
 
                 case 14:
-                    zombieCount = 55;
+                    zombieCount = 90;
                     bossCount = 0;
                     break;
 
                 case 15:
-                    zombieCount = 60;
-                    bossCount = 3;
-                    break;
-
-                case 16:
-                    zombieCount = 65;
-                    bossCount = 1;
-                    break;
-
-                case 17:
-                    zombieCount = 70;
-                    bossCount = 2;
-                    break;
-
-                case 18:
                     zombieCount = 80;
                     bossCount = 3;
                     break;
 
+                case 16:
+                    zombieCount = 100;
+                    bossCount = 1;
+                    break;
+
+                case 17:
+                    zombieCount = 110;
+                    bossCount = 2;
+                    break;
+
+                case 18:
+                    zombieCount = 120;
+                    bossCount = 3;
+                    break;
+
                 case 19:
-                    zombieCount = 90;
+                    zombieCount = 130;
                     bossCount = 4;
                     break;
 
                 case 20:
-                    zombieCount = 100;
+                    zombieCount = 140;
                     bossCount = 5;
+                    break;
+                case 21:
+                    zombieCount = 150;
+                    bossCount = 5;
+                    break;
+                case 22:
+                    zombieCount = 160;
+                    bossCount = 6;
+                    break;
+                case 23:
+                    zombieCount = 180;
+                    bossCount = 6;
+                    break;
+                case 24:
+                    zombieCount = 200;
+                    bossCount = 5;
+                    break;
+                case 25:
+                    zombieCount = 250;
+                    bossCount = 10;
+                    break;
+                case 26:
+                    zombieCount = 1;
+                    bossCount = 1;
                     break;
             }
 
@@ -143,7 +170,7 @@ namespace Terminal_Outbreak.Managers
                 enemies.Add(new Enemy("boss"));
             }
             currentLongRangeDistance = 500;
-            currentMidRangeDistance = 500;
+            currentMidRangeDistance = 5;
             closeQuartersCombat = false;
         }
         public int GetZombieCount()
@@ -156,14 +183,18 @@ namespace Terminal_Outbreak.Managers
             return bossCount;
         }
 
-        public int GetZombiesKilled()
+        public int GetAndResetZombiesKilled()
         {
-            return zombiesKilled;
+            int roundKills = zombiesKilled;
+            zombiesKilled = 0;
+            return roundKills;
         }
 
-        public int GetBossesKilled()
+        public int GetAndResetBossesKilled()
         {
-            return bossesKilled;
+            int roundKills = bossesKilled;
+            bossesKilled = 0;
+            return roundKills;
         }
 
         public List<Enemy> GetWave()
@@ -173,8 +204,7 @@ namespace Terminal_Outbreak.Managers
 
         public void DealDamage(int damageDealt, int numberOfTargets) // First to boss, then to others. If have time, extend this to another function so you can choose your target
         {
-            bossesKilled = 0;
-            zombiesKilled = 0;
+            
 
             if (bossCount > 0) // If there are bosses, deal damage to bosses first
             {
@@ -241,7 +271,7 @@ namespace Terminal_Outbreak.Managers
 
         }
 
-        // TO DO // Flesh this out - looks correct though?
+       
         public int RecieveDamage() // To be called each round of a "Close Quarters" encounter 
         {
             int damage = 0; // Calculate damage dealt to player
@@ -262,12 +292,12 @@ namespace Terminal_Outbreak.Managers
         {
             return currentLongRangeDistance;
         }
-        public void ReduceMidRangeDistance()
+        public void ReduceMediumRangeDistance()
         {
             currentMidRangeDistance -= 1;
         }
 
-        public int GetMidRangeDistance()
+        public int GetMediumRangeDistance()
         {
             return currentMidRangeDistance;
         }

@@ -12,13 +12,17 @@ namespace Terminal_Outbreak.Entities
         private string name;
         private int maxHealth;
         private int health;
-        private List<Weapon> inventory;
+        private int equippedPrimaryWeaponID;
+        private int equippedSecondaryWeaponID;
+        private int equippedMeleeWeaponID;
         public Player() 
         { 
             name = "default";
             maxHealth = 100;
             health = 100;
-            inventory = new List<Weapon>();
+            equippedPrimaryWeaponID = -1; // None Equipped
+            equippedSecondaryWeaponID = -1;
+            equippedMeleeWeaponID = -1;
         }
             
         public void SetName(string playerName)
@@ -50,17 +54,34 @@ namespace Terminal_Outbreak.Entities
 
         }
 
-        public void AddItem (Weapon item) 
-        { 
-            inventory.Add(item);
+       public void equipPrimaryWeapon(int weaponID)
+        {
+            equippedPrimaryWeaponID = weaponID;
         }
 
-        public void RemoveItem (Weapon item)
+        public void equipSecondaryWeapon(int weaponID)
         {
-            if (inventory.Contains(item))
-            {
-                inventory.Remove(item);
-            }
+            equippedSecondaryWeaponID = weaponID;
+        }
+
+        public void equipMeleeWeapon(int weaponID)
+        {
+            equippedMeleeWeaponID = weaponID;
+        }
+
+        public int GetEquippedPrimaryWeaponID()
+        {
+            return equippedPrimaryWeaponID;
+        }
+
+        public int GetEquippedSecondaryWeaponID()
+        {
+            return equippedSecondaryWeaponID;
+        }
+
+        public int GetEquippedMeleeWeaponID()
+        {
+            return equippedMeleeWeaponID;
         }
     }
 }

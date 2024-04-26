@@ -48,8 +48,6 @@ namespace Terminal_Outbreak.Scenes
             }
 
             
-             
-
             List<string> options = new List<string>();
             options.Add("Long Resupply Run - 8hrs");
             options.Add("Short Resupply Run - 4hrs");
@@ -81,7 +79,7 @@ namespace Terminal_Outbreak.Scenes
             if (terminalOutbreakGame.baseManager.GetTime() >= actionTime)
             {
                 failedRun = false;
-                terminalOutbreakGame.baseManager.ReduceTime(actionTime);                                // subtracts the actionTime from the time remaining in the day // TO DO
+                terminalOutbreakGame.baseManager.ReduceTime(actionTime);                                // subtracts the actionTime from the time remaining in the day //
                 List<Resource> resultsList = terminalOutbreakGame.resourceManager.Resupply(actionTime); // fetches gathered resources and passes in actionTime to differentiate long and short supply runs
                 
                 Dictionary<string, int> resourceCounts = new Dictionary<string, int>();

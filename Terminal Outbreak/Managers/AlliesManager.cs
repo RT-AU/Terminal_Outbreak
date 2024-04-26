@@ -65,7 +65,7 @@ namespace Terminal_Outbreak.Managers
         }
 
 
-        public string GetAllyNames() // TO DO // Check if this actually works how I would expect it to 
+        public string GetAllyNames() 
         {
             int allyCounter = 0;
             string display = $"{Environment.NewLine}    ";
@@ -93,7 +93,7 @@ namespace Terminal_Outbreak.Managers
             }
             return display;
         }
-        public string GetAllyInfo() // TO DO // Check if this actually works how I would expect it to 
+        public string GetAllyInfo() 
         {
             string display = string.Empty;
             for (int i = 0; i < allies.Count; i++)

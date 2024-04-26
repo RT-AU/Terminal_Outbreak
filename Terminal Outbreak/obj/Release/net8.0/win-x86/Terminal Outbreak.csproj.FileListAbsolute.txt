@@ -3,6 +3,16 @@ E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Out
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\Terminal Outbreak.runtimeconfig.json
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\Terminal Outbreak.dll
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\Terminal Outbreak.pdb
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.GeneratedMSBuildEditorConfig.editorconfig
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.AssemblyInfoInputs.cache
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.AssemblyInfo.cs
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.csproj.CoreCompileInputs.cache
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.sourcelink.json
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.dll
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\refint\Terminal Outbreak.dll
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.pdb
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.genruntimeconfig.cache
+E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\ref\Terminal Outbreak.dll
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\Microsoft.CSharp.dll
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\Microsoft.VisualBasic.Core.dll
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\Microsoft.VisualBasic.dll
@@ -185,14 +195,4 @@ E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Out
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\mscordbi.dll
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\mscorrc.dll
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\bin\Release\net8.0\win-x86\msquic.dll
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.GeneratedMSBuildEditorConfig.editorconfig
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.AssemblyInfoInputs.cache
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.AssemblyInfo.cs
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.csproj.CoreCompileInputs.cache
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.sourcelink.json
 E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal.6654D425.Up2Date
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.dll
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\refint\Terminal Outbreak.dll
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.pdb
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\Terminal Outbreak.genruntimeconfig.cache
-E:\Development\.NET\Projects\Terminal Outbreak - Survive the Undead\Terminal_Outbreak\Terminal Outbreak\obj\Release\net8.0\win-x86\ref\Terminal Outbreak.dll

@@ -25,8 +25,8 @@ namespace Terminal_Outbreak.Scenes.Trading
             int twID = 5;
             
             int fwCost = 5;
-            int swCost = 10;
-            int twCost = 15;
+            int swCost = 25;
+            int twCost = 30;
 
             int baseRationsCount = terminalOutbreakGame.resourceManager.GetFoodRations();
 
@@ -91,7 +91,7 @@ namespace Terminal_Outbreak.Scenes.Trading
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, fwCost);
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText($"{firstWeaponName} Obtained"));
-                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of a {firstWeaponName}!{Environment.NewLine}");
+                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of the {firstWeaponName}!{Environment.NewLine}");
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
@@ -112,7 +112,7 @@ namespace Terminal_Outbreak.Scenes.Trading
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, swCost);
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText($"{secondWeaponName} Obtained"));
-                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of a {secondWeaponName}!{Environment.NewLine}{Environment.NewLine}");
+                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of the {secondWeaponName}!{Environment.NewLine}{Environment.NewLine}");
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
@@ -132,7 +132,7 @@ namespace Terminal_Outbreak.Scenes.Trading
                         terminalOutbreakGame.resourceManager.ReduceResourceQuantity(0, twCost);
                         Console.Clear();
                         Console.WriteLine(Utils.FrameText($"{thirdWeaponName} Obtained"));
-                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of a {thirdWeaponName}!{Environment.NewLine}");
+                        Console.WriteLine($"{Environment.NewLine}You are now the proud owner of the {thirdWeaponName}!{Environment.NewLine}");
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
