@@ -20,43 +20,11 @@ namespace Terminal_Outbreak.Scenes
 
         public override void Run()
         { 
-            Dictionary<string, int> resourceList = terminalOutbreakGame.baseManager.GetResourceList(); // build a dictionary using resources stored in the baseManager
 
-            string results = "";
+
+            string results = terminalOutbreakGame.resourceManager.GetResources();
             string trapsResults;
-            int formatCounter = 0;
 
-
-
-
-            foreach (var kvp in resourceList) // Display resource names and counts                                            
-            {
-                if (kvp.Key == "Food Rations")
-                {
-                    terminalOutbreakGame.baseManager.IncreaseFoodRations(kvp.Value);
-                    continue;
-                }
-                
-                if (formatCounter == 0)
-                {
-                    results += $"{Environment.NewLine}   {kvp.Key}: {kvp.Value}";
-                    formatCounter++;
-                }
-                else if (formatCounter < 2)
-                {
-                    results += $"   {kvp.Key}: {kvp.Value}";
-                    formatCounter++;
-                }
-                else
-                {
-                    results += $"   {kvp.Key}: {kvp.Value}";
-                    formatCounter = 0;
-                }
-            }
-            if (results == "")
-            {
-                results = "NONE";
-            }
             if (terminalOutbreakGame.baseManager.GetTrapCount() == 0)
             {
                 trapsResults = "TRAP NAMES ETC"; // TO DO // set up proper trap display in base
@@ -71,7 +39,7 @@ namespace Terminal_Outbreak.Scenes
             
             display += ($"{Environment.NewLine}Allies: {terminalOutbreakGame.alliesManager.GetAllyNames()}{Environment.NewLine}");
 
-            display += ($"{Environment.NewLine}Food Rations: {terminalOutbreakGame.baseManager.CheckFoodRations()}{Environment.NewLine}");
+            display += ($"{Environment.NewLine}Food Rations: {terminalOutbreakGame.resourceManager.GetFoodRations()}{Environment.NewLine}");
             
             display += ($"{Environment.NewLine}Resources: {results}{Environment.NewLine}");
 
@@ -112,18 +80,8 @@ namespace Terminal_Outbreak.Scenes
                     Utils.PressEnter();
                     this.Run();
                     break;
-                case 3:
-                    //Console.Clear();
-
-                    //Console.WriteLine("---------");
-                    //Console.WriteLine("| Trade |");
-                    //Console.WriteLine("---------");
-                    //Console.WriteLine();
-
-                    //Utils.PressEnter();
-                    //this.Run();
-
-                    terminalOutbreakGame.hireAlliesScene.Run(); // TO DO // Currently bypasses the Trade Scene
+                case 3: // Go to trader's scene
+                    terminalOutbreakGame.tradeScene.Run();
 
                     break;
                 case 4:
@@ -151,9 +109,7 @@ namespace Terminal_Outbreak.Scenes
 
 
 
-            //terminalOutbreakGame.baseManager.buildTrap(0);
-            //terminalOutbreakGame.baseManager.buildTrap(1);
-            //terminalOutbreakGame.baseManager.getTraps();
+
         }
 
 

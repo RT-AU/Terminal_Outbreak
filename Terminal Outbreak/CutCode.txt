@@ -124,3 +124,41 @@ Distance functions in enemy manager
         //        return cQ;
         //    }
         //}
+
+
+Original base resource script
+         //   Dictionary<string, int> resourceList = terminalOutbreakGame.resourceManager.GetResourceList(); // build a dictionary using resources stored in the baseManager
+
+            //foreach (var kvp in resourceList) // Display resource names and counts                                            
+            //{
+            //    if (kvp.Key == "Food Rations")
+            //    {
+            //        terminalOutbreakGame.baseManager.IncreaseFoodRations(kvp.Value);
+            //        continue;
+            //    }
+                
+            //    if (formatCounter == 0)
+            //    {
+            //        results += $"{Environment.NewLine}   {kvp.Key}: {kvp.Value}";
+            //        formatCounter++;
+            //    }
+            //    else if (formatCounter < 2)
+            //    {
+            //        results += $"   {kvp.Key}: {kvp.Value}";
+            //        formatCounter++;
+            //    }
+            //    else
+            //    {
+            //        results += $"   {kvp.Key}: {kvp.Value}";
+            //        formatCounter = 0;
+            //    }
+            //}
+            //if (results == string.Empty)
+            //{
+            //    results = "NONE";
+            //}
+
+traps
+            //terminalOutbreakGame.baseManager.buildTrap(0);
+            //terminalOutbreakGame.baseManager.buildTrap(1);
+            //terminalOutbreakGame.baseManager.getTraps();

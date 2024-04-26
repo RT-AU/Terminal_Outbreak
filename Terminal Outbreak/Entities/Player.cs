@@ -12,13 +12,13 @@ namespace Terminal_Outbreak.Entities
         private string name;
         private int maxHealth;
         private int health;
-        private List<Equipment> inventory;
+        private List<Weapon> inventory;
         public Player() 
         { 
             name = "default";
             maxHealth = 100;
             health = 100;
-            inventory = new List<Equipment>();
+            inventory = new List<Weapon>();
         }
             
         public void SetName(string playerName)
@@ -50,12 +50,12 @@ namespace Terminal_Outbreak.Entities
 
         }
 
-        public void AddItem (Equipment item) 
+        public void AddItem (Weapon item) 
         { 
             inventory.Add(item);
         }
 
-        public void RemoveItem (Equipment item)
+        public void RemoveItem (Weapon item)
         {
             if (inventory.Contains(item))
             {

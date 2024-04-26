@@ -11,7 +11,7 @@ namespace Terminal_Outbreak.Managers
 
         private float prepTime;
         private int foodRations;
-        private List<Resource> baseResources; // TO DO // Move this to the resource Manager?
+        // private List<Resource> baseResources; // TO DO // Move this to the resource Manager?
         private List<Trap> traps;
         private BarrierWall barrier;
         private int dayNumber;
@@ -21,7 +21,7 @@ namespace Terminal_Outbreak.Managers
             prepTime = 12.0f;
             foodRations = 5;
             dayNumber = 1;
-            baseResources = new List<Resource>();
+            // baseResources = new List<Resource>();
             traps = new List<Trap>();
             barrier = new BarrierWall();
 
@@ -118,32 +118,32 @@ namespace Terminal_Outbreak.Managers
             return traps.Count;
         }
 
-        public void IncreaseResources(List<Resource> gatheredResources)
-        {
-            foreach (Resource resource in gatheredResources)
-            {
-                baseResources.Add(resource);
-            }
-        }
+        //public void IncreaseResources(List<Resource> gatheredResources) // TO DO // happens automatically now when resources are found
+        //{
+        //    foreach (Resource resource in gatheredResources)
+        //    {
+        //        baseResources.Add(resource);
+        //    }
+        //}
 
-        public Dictionary<string, int> GetResourceList()
-        {
-            Dictionary<string, int> resourceList = new Dictionary<string, int>();
+        //public Dictionary<string, int> GetResourceList()
+        //{
+        //    Dictionary<string, int> resourceList = new Dictionary<string, int>();
 
-            foreach (Resource resource in baseResources)
-            {
-                // If resource name exists in dictionary, increment its count
-                if (resourceList.ContainsKey(resource.GetResourceName()))
-                {
-                    resourceList[resource.GetResourceName()]++;
-                }
-                // Otherwise, add the resource name to the dictionary with count 1
-                else
-                {
-                    resourceList[resource.GetResourceName()] = 1;
-                }
-            }
-            return resourceList;
-        }
+        //    foreach (Resource resource in baseResources)
+        //    {
+        //        // If resource name exists in dictionary, increment its count
+        //        if (resourceList.ContainsKey(resource.GetResourceName()))
+        //        {
+        //            resourceList[resource.GetResourceName()]++;
+        //        }
+        //        // Otherwise, add the resource name to the dictionary with count 1
+        //        else
+        //        {
+        //            resourceList[resource.GetResourceName()] = 1;
+        //        }
+        //    }
+        //    return resourceList;
+        //}
     }
 }

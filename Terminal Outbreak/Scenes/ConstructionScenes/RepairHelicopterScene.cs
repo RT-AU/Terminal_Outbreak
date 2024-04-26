@@ -9,19 +9,40 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
 {
     internal class RepairHelicopterScene : Scene
     {
+        int metalRequired;
+        int fuelRequired;
+        int enginePartsRequired;
+        int electricalKitRequired;
+        int repairTime;
+        bool metalSessionCompleted;
+        bool fuelSessionCompleted;
+        bool engineSessionCompleted;
+        bool electricalSessionCompleted;
+        bool helicopterRepaired;
         public RepairHelicopterScene(TerminalOutbreakGame game) : base(game)
         {
-
+            // On construction, set cost for helicopter repair so that repairs can be done over time
+            metalRequired = 30;
+            fuelRequired = 20;
+            enginePartsRequired = 5;
+            electricalKitRequired = 1;
+            repairTime = 24;
+            metalSessionCompleted = false;
+            fuelSessionCompleted = false;
+            engineSessionCompleted = false;
+            electricalSessionCompleted = false;
+            helicopterRepaired = true;
         }
 
         public override void Run()
         {
             string header = Utils.FrameText("Repair Helicopter");
-            string display = $"{Environment.NewLine}To repair the helicopter, you will require the following resources and 12 Hours:{Environment.NewLine}";
-            display += $"{Environment.NewLine}30 Metal{Environment.NewLine}20 Fuel{Environment.NewLine}10 Electrical Components{Environment.NewLine}";
+            string display = Utils.WrapText($"{Environment.NewLine}To repair the helicopter, you will require the following resources and 24 hours of work. The work can be split up into four 6-hour sessions, with a session available every time one of the resource requirements is fulfulled.");
+            display += $"{Environment.NewLine}{Environment.NewLine}{metalRequired} Metal{Environment.NewLine}{fuelRequired} Fuel{Environment.NewLine}{enginePartsRequired} Engine Parts{Environment.NewLine}{electricalKitRequired} Electrical Kit{Environment.NewLine}{Environment.NewLine}{repairTime} hours of work still required{Environment.NewLine}";
 
             List<string> options = new List<string>();
-            options.Add("Repair Helicopter");
+            options.Add("Allocate Supplies for Repair");
+            options.Add("Repair Helicopter - 6 Hours");
             options.Add("RETURN");
 
 
@@ -31,14 +52,109 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             switch (selectedIndex)
             {
                 case 0:
-                    //if has materials and 12 hours remaining, repair helicopter and set repaired=1, and then change "Repair Helicopter" To escape // TO DO //
-                    // maybe something about having to leave someone behind if there are more that 7 allies or something.
+                    terminalOutbreakGame.allocateResourcesScene.RunAllocation(metalRequired, fuelRequired, enginePartsRequired, electricalKitRequired);
                     break;
                 case 1:
-                    terminalOutbreakGame.constructionChoiceScene.Run();
+                    
+
+                    if (metalRequired == 0 && metalSessionCompleted == false) // Fix Metals on the Helicopter
+                    {
+                        repairTime -= 6;
+                        metalSessionCompleted = true;
+                        Console.Clear();
+                        Console.WriteLine(Utils.FrameText("Frame Repaired"));
+                        Console.WriteLine(Utils.WrapText($"{Environment.NewLine}You spend 6 hours bolting the lightest scraps of metal you could find onto the helicopter frame. It doesn't look pretty, but it shouldn't snap in half mid-flight. Hopefully."));
+                        Console.WriteLine($"{Environment.NewLine}Press ENTER to continue.");
+                        Utils.PressEnter();
+                    }
+                    else if (fuelRequired == 0 && fuelSessionCompleted == false) // Fix Fuel on the Helicopter
+                    {
+                        repairTime -= 6;
+                        fuelSessionCompleted = true;
+                        Console.Clear();
+                        Console.WriteLine(Utils.FrameText("Refuelling Completed"));
+                        Console.WriteLine(Utils.WrapText($"{Environment.NewLine}You spend 6 hours checking the fuel lines, fuel tanks, and then refuelling the helicopter using a whole 20 canisters. That should be enough to get to the next town...right?"));
+                        Console.WriteLine($"{Environment.NewLine}Press ENTER to continue.");
+                        Utils.PressEnter();
+                    }
+                    else if (enginePartsRequired == 0 && engineSessionCompleted == false) // Fix Engine on the Helicopter
+                    {
+                        repairTime -= 6;
+                        engineSessionCompleted = true;
+                        Console.Clear();
+                        Console.WriteLine(Utils.FrameText("Engine Repaired"));
+                        Console.WriteLine(Utils.WrapText($"{Environment.NewLine}You spend 6 hours working on the engine like some kind of apocalyptic heavy-diesel Frankenstein, and this is your monster. It might be your eyes playing tricks on you, but it almost looks like there are more parts left over than when you started...Damn you're good."));
+                        Console.WriteLine($"{Environment.NewLine}Press ENTER to continue.");
+                        Utils.PressEnter();
+                    }
+                    else if (electricalKitRequired == 0 && electricalSessionCompleted == false) // Fix Electricals on the Helicopter
+                    {
+                        repairTime -= 6;
+                        electricalSessionCompleted = true;
+                        Console.Clear();
+                        Console.WriteLine(Utils.FrameText("Electrics Repaired"));
+                        Console.WriteLine(Utils.WrapText($"{Environment.NewLine}You spend 6 hours working on the electrics. If you were doing this in the mythic age the people would've called you Thor...because of the way sparks have been flying out of everything you touch. But hey, at least that means the battery is still good, right?"));
+                        Console.WriteLine($"{Environment.NewLine}Press ENTER to continue.");
+                        Utils.PressEnter();
+                    }
+                    else if (helicopterRepaired == false) // Nothing to work on yet
+                    {
+                        Console.Clear();
+                        Console.WriteLine(Utils.FrameText("Nothing To Work On Yet"));
+                        Console.WriteLine(Utils.WrapText($"{Environment.NewLine}You'll need to find and allocate some parts first."));
+                        Console.WriteLine($"{Environment.NewLine}Press ENTER to continue.");
+                        Utils.PressEnter();
+                    }
+                    else // if helicopter is repaired. CHANGE THE END PREPERATION PHASE INTO ESCAPE? // TO DO 
+                    {
+                        Console.Clear();
+                        Console.WriteLine(Utils.FrameText("Helicopter Already Repaired!"));
+                        Console.WriteLine(Utils.WrapText($"{Environment.NewLine}The Helicopter has already been repaired! End the Preperation Phase to Depart!"));
+                        Console.WriteLine($"{Environment.NewLine}Press ENTER to continue.");
+                        Utils.PressEnter();
+                    }
+
+
+                    if (repairTime == 0)
+                    {
+                        helicopterRepaired = true;
+                    }
+
+                    this.Run();
                     break;
             }
         }
-        
+
+
+        public void ReduceMetalRequired(int allocated)
+        {
+            if(metalRequired >= allocated)
+            {
+                metalRequired -= allocated;
+            }
+        }
+        public void ReduceFuelRequired(int allocated)
+        {
+            if (fuelRequired >= allocated)
+            {
+                fuelRequired -= allocated;
+            }
+        }
+        public void ReduceEnginePartsRequired(int allocated)
+        {
+            if (enginePartsRequired >= allocated)
+            {
+                enginePartsRequired -= allocated;
+            }
+        }
+        public void ReduceElectricalKitsRequired(int allocated)
+        {
+            if (electricalKitRequired >= allocated)
+            {
+                electricalKitRequired -= allocated;
+            }
+        }
+
+
     }
 }

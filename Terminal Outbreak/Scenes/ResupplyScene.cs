@@ -14,14 +14,14 @@ namespace Terminal_Outbreak.Scenes
     {
         
         private List<Resource> resources;
-        private List<Equipment> equipment;
+        private List<Weapon> equipment;
         private bool failedRun;
 
 
         public ResupplyScene(TerminalOutbreakGame game) : base(game)
         {
             resources = new List<Resource>();
-            equipment = new List<Equipment>();
+            equipment = new List<Weapon>();
             failedRun = false;
         }
 
@@ -29,13 +29,25 @@ namespace Terminal_Outbreak.Scenes
         {
             string header = Utils.FrameText("Resupply Run");
 
-            string enoughTime = "You prepare to head out on a resupply run. ";
-            if(failedRun == true)
+            
+            string display = Utils.WrapText($"{Environment.NewLine}You prepare to head out on a resupply run.{Environment.NewLine}");
+
+            if (terminalOutbreakGame.baseManager.GetTime() == 0)
             {
-                enoughTime = $"Not enough time! There is only {terminalOutbreakGame.baseManager.GetTime()} hours left before nightfall. ";
+                display = Utils.WrapText($"There is not enough time to go on a supply run! Night has fallen!.");
+                display += Environment.NewLine;
+            }
+            else if (failedRun == true)
+            {
+                    display = Utils.WrapText($"There is not enough time to go on a supply run! Only {terminalOutbreakGame.baseManager.GetTime()} hours remain before nightfall.");
+                    display += Environment.NewLine;
+            }
+            else
+            {
+                display += Utils.WrapText($"{Environment.NewLine}How much time do you want to spend looking for supplies?{Environment.NewLine}");
             }
 
-            string display = Utils.WrapText($"{Environment.NewLine}{enoughTime}How much time do you want to spend looking for supplies?{Environment.NewLine}");
+            
              
 
             List<string> options = new List<string>();
@@ -69,7 +81,7 @@ namespace Terminal_Outbreak.Scenes
             if (terminalOutbreakGame.baseManager.GetTime() >= actionTime)
             {
                 failedRun = false;
-                //terminalOutbreakGame.baseManager.reduceTime(actionTime);                                // subtracts the actionTime from the time remaining in the day
+                terminalOutbreakGame.baseManager.ReduceTime(actionTime);                                // subtracts the actionTime from the time remaining in the day // TO DO
                 List<Resource> resultsList = terminalOutbreakGame.resourceManager.Resupply(actionTime); // fetches gathered resources and passes in actionTime to differentiate long and short supply runs
                 
                 Dictionary<string, int> resourceCounts = new Dictionary<string, int>();
@@ -94,10 +106,8 @@ namespace Terminal_Outbreak.Scenes
                     results += $"{Environment.NewLine}{kvp.Key}: {kvp.Value}";
                 }
 
-                terminalOutbreakGame.baseManager.IncreaseResources(resultsList);
-
                 string header = Utils.FrameText("Results");
-                string display = $"Spent {actionTime} hours looking and found {results}";
+                string display = $"Spent {actionTime} hours looking and found:{Environment.NewLine}{results}{Environment.NewLine}";
 
                 List<string> options = new List<string>();
                 options.Add("RETURN");
@@ -106,13 +116,14 @@ namespace Terminal_Outbreak.Scenes
                 Menu resupplyResultsMenu = new Menu(display, options, header);
                 int selectedIndex = resupplyResultsMenu.RunHeaderVersion();
 
-                switch (selectedIndex) { case 0: terminalOutbreakGame.baseScene.Run(); break; };  
+                //switch (selectedIndex) { case 0: terminalOutbreakGame.baseScene.Run(); break; };  
+                switch (selectedIndex) { case 0: this.Run(); break; };  
                             
             }
             else
             {
                 failedRun = true;
-                terminalOutbreakGame.resupplyScene.Run(); // calls the screen again with updated info
+                this.Run(); // calls the scene again with updated info
             }
         }
     }

@@ -25,6 +25,7 @@ namespace Terminal_Outbreak.Mainframe
         public WallMaintenenceScene wallMaintenenceScene;
         public BuildTrapsScene buildTrapsScene;
         public RepairHelicopterScene repairHelicopterScene;
+        public AllocateResourcesScene allocateResourcesScene;
         public LongRangeCombatScene longRangeCombatScene;
         public MidRangeCombatScene midRangeCombatScene;
         public CloseQuartersCombatScene closeQuartersCombatScene;
@@ -42,6 +43,7 @@ namespace Terminal_Outbreak.Mainframe
         public ResourceManager resourceManager;
         public EnemyManager enemyManager;
         public AlliesManager alliesManager;
+        public EquipmentManager equipmentManager;
 
         public TerminalOutbreakGame()
         {
@@ -54,6 +56,7 @@ namespace Terminal_Outbreak.Mainframe
             wallMaintenenceScene = new WallMaintenenceScene(this);
             buildTrapsScene = new BuildTrapsScene(this);
             repairHelicopterScene = new RepairHelicopterScene(this);
+            allocateResourcesScene = new AllocateResourcesScene(this);
             longRangeCombatScene = new LongRangeCombatScene(this);
             midRangeCombatScene = new MidRangeCombatScene(this);
             closeQuartersCombatScene = new CloseQuartersCombatScene(this);
@@ -71,11 +74,12 @@ namespace Terminal_Outbreak.Mainframe
             resourceManager = new ResourceManager();
             enemyManager = new EnemyManager();
             alliesManager = new AlliesManager();
+            equipmentManager = new EquipmentManager();
         }
 
         public void Start() // Run the game
         {
-            titleScene.Run();
+            baseScene.Run();
         }
 
 

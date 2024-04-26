@@ -29,7 +29,7 @@ namespace Terminal_Outbreak.Entities
             {
                 case 0:
                     name = "Isabella \"Sheriff\" Barrett";
-                    description = Utils.WrapText($"Some say she was born in the West, others say that's just how she's dressed. Regardless, Isabella's 8-shooter revolver: \"Lawful Evil\" packs a mean punch, causing 10 damage to 8 enemies within both Long and Medium Range.");
+                    description = Utils.WrapText($"Some say she was born in the West, others say that's just how she's dressed. Regardless, Isabella's 8-shooter revolver: \"Lawful Evil\" packs a mean punch, causing 10 damage to 8 enemies within both Long Range and Medium Range.");
                     allyWeaponDamageLR = 10;
                     allyWeaponDamageMR = 10;
                     allyTargetMultiLR = 8;
@@ -37,7 +37,7 @@ namespace Terminal_Outbreak.Entities
 
                     break;
                 case 1:
-                    name = "Steven \"Boomstick\" Adams";
+                    name = "Dr Steven \"Boomstick\" Adams";
                     description = Utils.WrapText($"\"Open Wide, lets see what's inside!\" Steven was a dentist before he found his true calling in shotgun diplomacy. His shotgun: \"Lollipop\" will carefully deconstruct Zombies at Medium Range by dealing 5 damage to 10 enemies.");
                     allyWeaponDamageLR = 0;
                     allyWeaponDamageMR = 5;
@@ -47,7 +47,7 @@ namespace Terminal_Outbreak.Entities
                     break;
                 case 2:
                     name = "Nathaniel \"Timmy\" Thomson";
-                    description = Utils.WrapText($"Villain or hero, no one is certain, but it's heavily suspected that Nathaniel watched far too many mafia movies before the city lost power. His Thompson sub machine gun: \"Timothy\" proves that even the Apocalpyse can be classy by dishing out an appetiser of 3 damage to 20 enemies at Long Range, and a full-auto full course of 10 damage to 3 enemies within Medium Range.");
+                    description = Utils.WrapText($"Villain or hero, no one is certain, but it's heavily suspected that Nathaniel watched far too many mafia movies before the city lost power. His Thompson sub machine gun: \"Timothy\" proves that even the Apocalpyse can be classy by dishing out an appetiser of 3 damage to 20 enemies at LR, and a full-auto full course of 10 damage to 3 enemies within MR.");
                     allyWeaponDamageLR = 3;
                     allyWeaponDamageMR = 10;
                     allyTargetMultiLR = 20;

@@ -11,23 +11,42 @@ namespace Terminal_Outbreak.Managers
 {
     internal class ResourceManager
     {
-        
-        private int[] lootTable = 
-        {
-            30, // Food chance
-            25, // Wood chance
-            20, // Metal chance
-            18, // Fuel Barrel chance
-            15, // Ammunition chance
-            10, // Pipes chance
-            7,  // Gun parts chance
-            5   // Electrical Components
-        };
-        
-        
-        private Random random = new Random();
+        private List<Resource> baseResources; // TO DO // Move this to the resource Manager?
+
+        private int[] lootTable;
+
+
+
+        private Random random;
         private int total;
 
+        public ResourceManager()
+        {
+            baseResources = new List<Resource>();
+            lootTable = 
+                [30, // Food chance
+                25, // Wood chance
+                20, // Metal chance
+                18, // Fuel Barrel chance
+                15, // Ammunition chance
+                10, // Pipes chance
+                7,  // Gun parts chance
+                5,   // Engine Parts
+                3, // Electrical Kit
+                ];
+
+            random = new Random();
+
+            for (int i = 0; i < 5; i++) // gives the player 5 rations to start with
+            {
+                baseResources.Add(new Resource(0));
+            }
+        }
+
+        public List<Resource> GetBaseResources()
+        {
+            return baseResources;
+        }
         public List<Resource> Resupply(float actionTime)
         {
             total = 0;
@@ -72,8 +91,129 @@ namespace Terminal_Outbreak.Managers
                 quantity++;
             }
 
-            return foundResources;
+            foreach (Resource resource in foundResources) // update master resource list with found resources
+            {
+                baseResources.Add(resource);
+            }
+
+            return foundResources; // return resources found this run for printout
         }
 
+
+        public int GetFoodRations()
+        {
+            int rationsCount = 0;
+
+            foreach (Resource resource in baseResources)
+            {
+                if (resource.GetResourceID() == 0)
+                {
+                    rationsCount++;
+                }
+            }
+            return rationsCount;
+        }
+
+        //public Dictionary<string, int> GetResourceList()
+        //{
+        //    Dictionary<string, int> resourceList = new Dictionary<string, int>();
+
+        //    foreach (Resource resource in baseResources)
+        //    {
+        //        // If resource name exists in dictionary, increment its count
+        //        if (resourceList.ContainsKey(resource.GetResourceName()))
+        //        {
+        //            resourceList[resource.GetResourceName()]++;
+        //        }
+        //        // Otherwise, add the resource name to the dictionary with count 1
+        //        else
+        //        {
+        //            resourceList[resource.GetResourceName()] = 1;
+        //        }
+        //    }
+        //    return resourceList;
+        //}
+
+        public string GetResources()
+        {
+            int formatCounter = 0;
+            string resources = $"{Environment.NewLine}    ";
+            var groupedResources = baseResources.GroupBy(r => r.GetResourceID()) // AFTERMATH // Look into this kind of code a lot more in-depth: LINQ
+                                    .Select(g => new { ID = g.Key, Count = g.Count(), Name = g.First().GetResourceName() })
+                                    .OrderBy(r => r.ID);
+            foreach (var resource in groupedResources)
+            {
+                if (resource.ID == 0)
+                {
+                    continue;
+                }
+                
+                resources += ($"{resource.Name}: {resource.Count}".PadRight(20));
+                formatCounter++;
+                
+                if (formatCounter == 3)
+                {
+                    resources += $"{Environment.NewLine}    ";
+                    formatCounter = 0;
+                }
+            }
+
+            bool allFood = baseResources.All(r => r.GetResourceID() == 0); // checks to make sure that only food exists in the resource list because food is given its own display
+            if (allFood)
+            {
+                resources = "NONE";
+            }
+            return resources;
+        }
+
+        public bool CheckResourceQuantity(int resourceID, int reqCount) // something like this should be used to check if ID has enough for contruction, etc.
+        {
+            int quantity = baseResources.Count(r => r.GetResourceID() == 1);
+            if (quantity >= reqCount)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public int GetResourceAmount(int resourceID)
+        {
+            int amount = baseResources.Count(r => r.GetResourceID() == resourceID);
+            return amount;
+        }
+
+        public void ReduceResourceQuantity(int resourceID, int reductionAmount)
+        {
+            // Check if there are at least reductionAmount number of resources with the given resourceID
+            int resourceCount = baseResources.Count(r => r.GetResourceID() == resourceID);
+            if (resourceCount < reductionAmount)
+            {
+                Console.WriteLine("Not enough resources to remove.");
+                Utils.PressEnter();
+                return;
+            }
+
+            for (int i = 0; i < reductionAmount; i++)
+            {
+                // Find the index of the first resource with the given ID
+                int index = baseResources.FindIndex(r => r.GetResourceID() == resourceID);
+
+                // If a resource with the given ID is found, remove it
+                if (index != -1)
+                {
+                    baseResources.RemoveAt(index);
+                }
+                else
+                {
+                    // If no resource with the given ID is found, stop the loop
+                    break;
+                }
+            }
+        }
     }
+
+    
 }

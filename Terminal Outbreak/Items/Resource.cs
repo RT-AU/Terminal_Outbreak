@@ -25,10 +25,10 @@ namespace Terminal_Outbreak.Items
                     resourceName = "Wood";
                     break;
                 case 2:
-                    resourceName = "Metal";
+                    resourceName = "Scrap Metal";
                     break;
                 case 3:
-                    resourceName = "Fuel Barrel";
+                    resourceName = "Fuel Canisters";
                     break;
                 case 4:
                     resourceName = "Ammunition";
@@ -40,12 +40,19 @@ namespace Terminal_Outbreak.Items
                     resourceName = "Gun Parts";
                     break;
                 case 7:
-                    resourceName = "Electrical Components";
+                    resourceName = "Engine Parts";
+                    break;
+                case 8:
+                    resourceName = "Electrical Kits";
                     break;
 
             }
         }
 
+        public int GetResourceID()
+        {
+            return resourceID;
+        }
         public string GetResourceName()
         {
             return resourceName;
