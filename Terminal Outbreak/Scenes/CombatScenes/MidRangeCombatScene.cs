@@ -88,15 +88,9 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                         }
                         break;
                 }
-
                 if (alliesDamageReadout != string.Empty) { display += alliesDamageReadout; } // gets the readout from allies' damage (if any)
                 if (trapDamageReadout != string.Empty) { display += trapDamageReadout; }    // gets the readout from trap damage (if any)
-                
-
             }
-
-            
-            
             if (roundNumber > 1)
             {
                 display += GetHoardInfo(zombieCount, bossCount, zombiesKilled, bossesKilled, distance); // call info on position and number of the hoard for display
@@ -166,8 +160,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                     alliesDamageReadout = AlliesDamage(); // calculate ally damage
                     trapDamageReadout = TrapDamage();
                     break;
-
-
             }
         }
 
@@ -178,7 +170,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
             List<Ally> allies = terminalOutbreakGame.alliesManager.GetAlliesList();
             foreach (Ally ally in allies)
             {
-
                 if (ally.GetIsHired() == false)
                 {
 
@@ -211,7 +202,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                 totalAllyDamage += Environment.NewLine;
             }
             return totalAllyDamage;
-
         }
 
         public string TrapDamage()
@@ -286,6 +276,7 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
             terminalOutbreakGame.baseScene.Run();
 
         }
+
         public string GetHoardInfo(int zombieCount, int bossCount, int zombiesKilled, int bossesKilled, int distance)
         {
             string display = string.Empty;
@@ -340,5 +331,4 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
             return display;
         }
     }
-    
 }

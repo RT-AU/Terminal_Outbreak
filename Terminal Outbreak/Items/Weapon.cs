@@ -74,7 +74,6 @@ namespace Terminal_Outbreak.Items
                     weaponCQDamage = 3;
                     weaponCQMulti = 1;
                     description = Utils.WrapText($"Pop goes the Rifle. Being built for long range means its practically useless in a close fight. Deals {weaponLongRangeDamage} damage to a single enemy at long range, {weaponMediumRangeDamage} damage at medium range, and {weaponCQDamage} in close quarters.");
-
                     break;
                 case 4:
                     weaponName = "Sniper Rifle";
@@ -141,7 +140,6 @@ namespace Terminal_Outbreak.Items
                     weaponCQMulti = 1;
                     description = Utils.WrapText($"Short in stature, the sawn-off will do basically nothing at long range, dealing {weaponLongRangeDamage} damage to {weaponLongRangeMulti} enemies. But once they're in medium range you'll hit {weaponMediumRangeMulti} of them for {weaponMediumRangeDamage} damage apiece. If they get closer than that, you're only going to hit {weaponCQMulti} of them, but you'll deal a whopping {weaponCQDamage} damage!");
                     break;
-
             }
         }
 
@@ -149,10 +147,12 @@ namespace Terminal_Outbreak.Items
         {
             return weaponID;
         }
+
         public string GetWeaponName()
         {
             return weaponName;
         }
+
         public string GetWeaponType()
         {
             return weaponName;
@@ -183,19 +183,21 @@ namespace Terminal_Outbreak.Items
             return weaponLongRangeMulti;
         }
 
-
         public int GetWeaponMediumRangeDamage()
         {
             return weaponMediumRangeDamage;
         }
+
         public int GetWeaponMediumRangeMulti()
         {
             return weaponMediumRangeMulti;
         }
+
         public int GetWeaponCQDamage()
         {
             return weaponCQDamage;
         }
+
         public int GetWeaponCQMulti()
         {
             return weaponCQMulti;

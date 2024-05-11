@@ -30,7 +30,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             options.Add("All Available");
             options.Add("RETURN");
 
-
             Menu resupplyResultsMenu = new Menu(display, options, header);
             int selectedIndex = resupplyResultsMenu.RunHeaderVersion();
             int resourceRequired;
@@ -40,7 +39,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             string resourceName;
 
             Resource? resource;
-
 
             switch (selectedIndex)
             {
@@ -335,12 +333,9 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                     Console.Write(miniDisplay);
                     Console.WriteLine(Environment.NewLine);
                 }
-
-
             } while (quantity > resourceRequired || quantity != 0);
             Console.CursorVisible = false;
             return 0;
         }
-
     }
 }

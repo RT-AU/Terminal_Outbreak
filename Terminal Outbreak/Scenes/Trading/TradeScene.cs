@@ -49,7 +49,5 @@ namespace Terminal_Outbreak.Scenes.Trading
                     break;
             }
         }
-
-
     }
 }

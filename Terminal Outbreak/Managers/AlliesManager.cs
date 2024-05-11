@@ -11,8 +11,6 @@ namespace Terminal_Outbreak.Managers
     
     internal class AlliesManager
     {
-        
-        
         List<Ally> allies;
         public AlliesManager()
         {
@@ -22,8 +20,6 @@ namespace Terminal_Outbreak.Managers
                 Ally ally = new Ally(i);
                 allies.Add(ally);
             }
-
- 
         }
 
         public List<Ally> GetAlliesList() 
@@ -64,7 +60,6 @@ namespace Terminal_Outbreak.Managers
             return display;
         }
 
-
         public string GetAllyNames() 
         {
             int allyCounter = 0;
@@ -82,10 +77,8 @@ namespace Terminal_Outbreak.Managers
                     {
                         display += $"{Environment.NewLine}    ";
                     }
-                    display += $"{allies[i].GetName()}";
-                    
+                    display += $"{allies[i].GetName()}";   
                 }
-                
             }
             if (allyCounter == 0)
             {
@@ -93,6 +86,7 @@ namespace Terminal_Outbreak.Managers
             }
             return display;
         }
+
         public string GetAllyInfo() 
         {
             string display = string.Empty;

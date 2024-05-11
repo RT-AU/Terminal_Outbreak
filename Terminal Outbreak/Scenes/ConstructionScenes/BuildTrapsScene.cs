@@ -67,15 +67,12 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                             // Count the number of resources with the given ID
                             int resourceCount = terminalOutbreakGame.resourceManager.GetBaseResources().Count(r => r.GetResourceID() == resourceID);
                             
-
                             if (resourceCount < quantity)
                             {
                                 enoughResources = false;
                                 
                             }
-                            
                         }
-
                         if (enoughResources == false)
                         {
                             Console.Clear();
@@ -100,7 +97,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                             terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
                             spikeTrapBuilt = true;
                         }
-                        
                     }
                     Run();
                     break;
@@ -123,7 +119,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                             if (resourceCount < quantity)
                             {
                                 enoughResources = false;
-
                             }
                         }
                         if (enoughResources == false)
@@ -147,11 +142,9 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                                 quantity = ingredient.Value;
                                 terminalOutbreakGame.resourceManager.ReduceResourceQuantity(resourceID, quantity);
                             }
-                            
                             terminalOutbreakGame.baseManager.BuildTrap(selectedIndex);
                             bladeTrapBuilt = true;
                         }
-
                     }
                     Run();
                     break;
@@ -174,7 +167,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                             if (resourceCount < quantity)
                             {
                                 enoughResources = false;
-
                             }
                         }
                         if (enoughResources == false)
@@ -223,7 +215,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                             if (resourceCount < quantity)
                             {
                                 enoughResources = false;
-
                             }
                         }
                         if (enoughResources == false)

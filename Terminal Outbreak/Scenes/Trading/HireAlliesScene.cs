@@ -15,13 +15,11 @@ namespace Terminal_Outbreak.Scenes.Trading
         private bool stevenHired = false;
         private bool nateHired = false;
         private bool mayaHired = false;
-        
 
         public HireAlliesScene(TerminalOutbreakGame game) : base(game)
         {
 
         }
-
 
         public override void Run()
         {
@@ -37,7 +35,6 @@ namespace Terminal_Outbreak.Scenes.Trading
 
             display += terminalOutbreakGame.alliesManager.HireAlliesReadout(isabellaHired, stevenHired, nateHired, mayaHired);
             display += Environment.NewLine;
-
 
             List<string> options = new List<string>();
             if (!isabellaHired) { options.Add($"Isabella \"Sheriff\" Barrett - Hire Fee: {isabellaHireCost} Rations"); }
@@ -59,9 +56,7 @@ namespace Terminal_Outbreak.Scenes.Trading
             if(selectedOption.Contains("Nathaniel")) { selectedIndex = 2; }
             if(selectedOption.Contains("Maya")) { selectedIndex = 3; }
             if(selectedOption.Contains("RETURN")) { selectedIndex = 4; }
-
             
-
             switch (selectedIndex)
             {
                 case 0:
@@ -154,11 +149,7 @@ namespace Terminal_Outbreak.Scenes.Trading
                 case 5:
                     Console.WriteLine("Error in selection");
                     break;
-
             }
-
         }
-
-
     }
 }

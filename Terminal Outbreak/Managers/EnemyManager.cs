@@ -18,13 +18,11 @@ namespace Terminal_Outbreak.Managers
 
         private int currentLongRangeDistance; // Max of 500m from the barrier, min of 0m from the barrier
         private int currentMidRangeDistance; // Max of 5m from the player, min of 0m = enter close combat
-        private bool closeQuartersCombat;
 
         public EnemyManager()
         {
             enemies = new List<Enemy>();
         }
-
 
         public void CreateWave(int waveNumber)
         {
@@ -155,8 +153,8 @@ namespace Terminal_Outbreak.Managers
                     zombieCount = 250;
                     bossCount = 10;
                     break;
-                case 26:
-                    zombieCount = 1;
+                case 26: // in case of overflow, although currently no discovered issues
+                    zombieCount = 1; 
                     bossCount = 1;
                     break;
             }
@@ -171,7 +169,6 @@ namespace Terminal_Outbreak.Managers
             }
             currentLongRangeDistance = 500;
             currentMidRangeDistance = 5;
-            closeQuartersCombat = false;
         }
         public int GetZombieCount()
         {
@@ -202,10 +199,8 @@ namespace Terminal_Outbreak.Managers
             return enemies;
         }
 
-        public void DealDamage(int damageDealt, int numberOfTargets) // First to boss, then to others. If have time, extend this to another function so you can choose your target
+        public void DealDamage(int damageDealt, int numberOfTargets) // Deal damage function used during combat.
         {
-            
-
             if (bossCount > 0) // If there are bosses, deal damage to bosses first
             {
                 for (int i = enemies.Count - 1; i >= 0; i--)
@@ -253,7 +248,6 @@ namespace Terminal_Outbreak.Managers
             {
                 for (int i = enemies.Count - 1; i >= 0; i--)
                 {
-
                     enemies[i].DealDamage(damageDealt);
                     if (enemies[i].GetHealth() <= 0)
                     {
@@ -271,7 +265,6 @@ namespace Terminal_Outbreak.Managers
 
         }
 
-       
         public int RecieveDamage() // To be called each round of a "Close Quarters" encounter 
         {
             int damage = 0; // Calculate damage dealt to player
@@ -282,7 +275,6 @@ namespace Terminal_Outbreak.Managers
             return damage;
         }
 
-       
         public void ReduceLongRangeDistance()
         {
             currentLongRangeDistance -= 100;
@@ -292,6 +284,7 @@ namespace Terminal_Outbreak.Managers
         {
             return currentLongRangeDistance;
         }
+
         public void ReduceMediumRangeDistance()
         {
             currentMidRangeDistance -= 1;
@@ -301,17 +294,5 @@ namespace Terminal_Outbreak.Managers
         {
             return currentMidRangeDistance;
         }
-        public void SetCloseQuarters(bool inCQ)
-        {
-            closeQuartersCombat = inCQ;
-        }
-
-        public bool GetCloseQuarters()
-        {
-            return closeQuartersCombat;
-        }
-
-
-
     }
 }

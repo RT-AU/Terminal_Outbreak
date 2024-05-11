@@ -92,7 +92,6 @@ namespace Terminal_Outbreak.Scenes.Trading
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
-
                     this.Run();
                     break;
                 case 1: // Second Weapon

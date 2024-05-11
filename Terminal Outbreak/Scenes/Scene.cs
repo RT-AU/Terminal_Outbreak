@@ -7,7 +7,7 @@ using Terminal_Outbreak.Mainframe;
 
 namespace Terminal_Outbreak.Scenes
 {
-    internal class Scene
+    internal class Scene // class for scene inheritence
     {
         protected TerminalOutbreakGame terminalOutbreakGame;
         public Scene(TerminalOutbreakGame game)

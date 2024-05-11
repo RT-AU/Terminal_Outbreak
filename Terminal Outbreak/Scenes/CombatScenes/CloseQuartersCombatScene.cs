@@ -18,6 +18,7 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
         string chosenRoundWeapon;
         string alliesDamageReadout;
         string zombiesDamageReadout;
+
         public CloseQuartersCombatScene(TerminalOutbreakGame game) : base(game)
         {
             chosenRoundWeapon = string.Empty; // used to see which weapon Player is using for this round
@@ -37,7 +38,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
             int playerEquippedSecondaryWeapon = terminalOutbreakGame.player.GetEquippedSecondaryWeaponID();
             int playerEquippedMeleeWeapon = terminalOutbreakGame.player.GetEquippedMeleeWeaponID();
 
-
             string header = Utils.FrameText($"Nightfall - Close Quarters: ROUND {roundNumber}");
             string display = "";
             int zombieCount = terminalOutbreakGame.enemyManager.GetZombieCount();
@@ -48,9 +48,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
             int bossesKilled = terminalOutbreakGame.enemyManager.GetAndResetBossesKilled();
 
             int distance = terminalOutbreakGame.enemyManager.GetMediumRangeDistance();
-
-
-            
 
             if (roundNumber > 1)
             {
@@ -108,8 +105,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                         }
                         break;
                 }
-
-
             }
 
             if (roundNumber > 1)
@@ -130,7 +125,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                 terminalOutbreakGame.warningScene.GameOverKilled();
             }
             
-
             List<string> options = new List<string>();
             options.Add("Primary Weapon");
             options.Add("Secondary Weapon");
@@ -186,7 +180,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                     zombiesDamageReadout = ZombiesAttack();
                     this.Run();
                     break;
-
             }
         }
 

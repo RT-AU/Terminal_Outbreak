@@ -12,11 +12,7 @@ namespace Terminal_Outbreak.Entities
         private int maxHealth;
         private int enemyDamage;
         private int barrierDamage;
-
-
         private int currentHealth;
-
-
 
         public Enemy(string enemyType)
         {
@@ -48,8 +44,6 @@ namespace Terminal_Outbreak.Entities
         {
             currentHealth -= damage;
         }
-
-        
 
         public int GetHealth() 
         { 

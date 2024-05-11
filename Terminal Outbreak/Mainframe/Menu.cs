@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Terminal_Outbreak.Mainframe
 {
-    internal class Menu
+    internal class Menu // Class which creates the logic for controlling the game through the arrow keys rather than requiring text input.
     {
         private string mainTitle;
         private string initialDisplay;
@@ -167,7 +167,7 @@ namespace Terminal_Outbreak.Mainframe
             return selectedIndex;
         }
 
-        public string RunRemovable(List<string> optionNames)
+        public string RunRemovable(List<string> optionNames) // function for menus where options should be removed after certain conditions (i.e. after buying hiring an ally)
         {
             ConsoleKey keyPressed;
             do

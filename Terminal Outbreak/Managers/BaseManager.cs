@@ -98,17 +98,6 @@ namespace Terminal_Outbreak.Managers
                     {
                         trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Trap effective at both Long and Medium range, and deals {traps[i].GetLRDamage()} Damage to {traps[i].GetMulti()} enemies)";
                     }
-
-                    //if (traps[i].GetResourceRequired() != "NONE") // FOR NOW, TRAP RESOURCES WILL BE REMOVED
-                    //{
-                    //    string resourceRequired = traps[i].GetResourceRequired();
-                    //    int resourceQuantity = traps[i].GetResourceRequiredQuanitity();
-                    //    trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage to {traps[i].GetMulti()} enemies and uses {resourceQuantity} {resourceRequired} every night)";
-                    //}
-                    //else
-                    //{
-                    //    trapString += $"{Environment.NewLine}{traps[i].GetTrapName()} (Deals {traps[i].GetDamage()} Damage to {traps[i].GetMulti()} enemies)";
-                    //}
                     
                     Dictionary<int, int> trapRecipes = traps[i].GetRecipe(); // fetches the recipe of the traps
                     string recipe = string.Empty;
@@ -117,10 +106,7 @@ namespace Terminal_Outbreak.Managers
                     {
                         Resource resource = new Resource(trapRecipe.Key);
                         recipe += $"{trapRecipe.Value} {resource.GetResourceName()}{Environment.NewLine}";
-                        //recipe += resource.GetResourceName();
                     }
-
-                    //trapString += $"{Environment.NewLine}{traps[i].GetRecipe()}";
                     trapString += $"{Environment.NewLine}{recipe}";
                 }
             }
@@ -176,22 +162,27 @@ namespace Terminal_Outbreak.Managers
         {
             barrierBuilt = true;
         }
+
         public void DamageBarrier()
         {
             barrierHealth--;
         }
+
         public void ResetBarrierHealth()
         {
             barrierHealth = 5;
         }
+
         public int GetBarrierHealth()
         { 
             return barrierHealth; 
         }
+
         public bool IsBarrierDestroyed()
         {
             return barrierDestroyed;
         }
+
         public void DestroyBarrier()
         {
             barrierDestroyed = true;

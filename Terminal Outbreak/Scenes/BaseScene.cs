@@ -22,7 +22,6 @@ namespace Terminal_Outbreak.Scenes
 
         public override void Run()
         {
-
             if (isNight)
             {
                 int rations = terminalOutbreakGame.resourceManager.GetFoodRations();
@@ -32,17 +31,14 @@ namespace Terminal_Outbreak.Scenes
                 }
                 isNight = false;
             }
-            
             if (terminalOutbreakGame.baseManager.GetDayNumber() == 26)
             {
                 terminalOutbreakGame.endingAndCreditsScene.RescueVictory(); // If Day 1 is reached, 
             }
 
-
             string traps = terminalOutbreakGame.baseManager.GetBuiltTrapsNames();
             string resources = terminalOutbreakGame.resourceManager.GetResources();
             bool helicopterFixed = terminalOutbreakGame.baseManager.IsHelicopterFixed();
-
 
             string header = Utils.FrameText(terminalOutbreakGame.player.GetName() + $"'s Outpost - Day {terminalOutbreakGame.baseManager.GetDayNumber()}");
             string display = ($"{header}{Environment.NewLine}Health: {terminalOutbreakGame.player.getHealth()}{Environment.NewLine}");
@@ -130,8 +126,6 @@ namespace Terminal_Outbreak.Scenes
                     }
                     break;
             }
-
         }
-
     }
 }

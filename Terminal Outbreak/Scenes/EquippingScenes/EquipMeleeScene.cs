@@ -103,7 +103,6 @@ namespace Terminal_Outbreak.Scenes.EquippingScenes
                     }
                     terminalOutbreakGame.equipmentScene.Run();
                     break;
-
                 case 1: // Second Weapon
                     if (cemwName == secondWeaponName) // IF IS ALREADY EQUIPPED
                     {
@@ -121,10 +120,8 @@ namespace Terminal_Outbreak.Scenes.EquippingScenes
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
-
                     terminalOutbreakGame.equipmentScene.Run();
                     break;
-
                 case 2:
                     if (cemwName == thirdWeaponName) // IF IS ALREADY EQUIPPED
                     {
@@ -142,7 +139,6 @@ namespace Terminal_Outbreak.Scenes.EquippingScenes
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
-
                     terminalOutbreakGame.equipmentScene.Run();
                     break;
                 case 3:

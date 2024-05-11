@@ -56,17 +56,8 @@ namespace Terminal_Outbreak.Mainframe
                 line += word + " ";
                 lineLength += word.Length + 1; // Include space after each word
             }
-
             return line;
         }
-
-        
-
-
     }
-
-    
-
-
 }
 

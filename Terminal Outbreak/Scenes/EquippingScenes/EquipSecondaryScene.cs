@@ -121,7 +121,6 @@ namespace Terminal_Outbreak.Scenes.EquippingScenes
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
-
                     terminalOutbreakGame.equipmentScene.Run();
                     break;
 
@@ -142,7 +141,6 @@ namespace Terminal_Outbreak.Scenes.EquippingScenes
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
-
                     terminalOutbreakGame.equipmentScene.Run();
                     break;
                 case 3:

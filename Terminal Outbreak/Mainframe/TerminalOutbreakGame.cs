@@ -93,7 +93,6 @@ namespace Terminal_Outbreak.Mainframe
             // Create Player Instance
             player = new Player();
 
-
             // Create Manager Instances
             baseManager = new BaseManager();
             resourceManager = new ResourceManager();

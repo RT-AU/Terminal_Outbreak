@@ -35,7 +35,6 @@ namespace Terminal_Outbreak.Managers
             {
                 weaponName = weapon.GetWeaponName();
             }
-
             return weaponName;
         }
 
@@ -47,7 +46,6 @@ namespace Terminal_Outbreak.Managers
             {
                 weaponType = weapon.GetWeaponType();
             }
-
             return weaponType;
         }
 
@@ -59,7 +57,6 @@ namespace Terminal_Outbreak.Managers
             {
                 description = weapon.GetDescription();
             }
-
             return description;
         }
 
@@ -93,6 +90,7 @@ namespace Terminal_Outbreak.Managers
             }
             return damage;
         }
+
         public int GetWeaponMRDamage(int weaponID)
         {
             int damage = 0;
@@ -103,6 +101,7 @@ namespace Terminal_Outbreak.Managers
             }
             return damage;
         }
+
         public int GetWeaponCQDamage(int weaponID)
         {
             int damage = 0;
@@ -135,6 +134,7 @@ namespace Terminal_Outbreak.Managers
             }
             return multi;
         }
+
         public int GetWeaponCQMulti(int weaponID)
         {
             int multi = 1;
@@ -145,6 +145,5 @@ namespace Terminal_Outbreak.Managers
             }
             return multi;
         }
-
     }
 }

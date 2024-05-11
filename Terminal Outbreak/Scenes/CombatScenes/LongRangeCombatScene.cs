@@ -19,6 +19,7 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
         string chosenRoundWeapon;
         string alliesDamageReadout;
         string trapDamageReadout;
+        
         public LongRangeCombatScene(TerminalOutbreakGame game) : base(game)
         {
             chosenRoundWeapon = string.Empty; // used to see which weapon Player is using for this round
@@ -91,11 +92,8 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                         }
                         break;
                 }
-                
                 if (alliesDamageReadout != string.Empty) { display += alliesDamageReadout; }
-                
                 if (trapDamageReadout != string.Empty) { display += trapDamageReadout; }
-         
             }
 
             display += GetHoardInfo(zombieCount, bossCount, zombiesKilled, bossesKilled, distance); // call info on position and number of the hoard for display
@@ -127,8 +125,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                     Utils.PressEnter();
                     terminalOutbreakGame.midRangeCombatScene.Run();
                 }
-
-                
             }
 
             List<string> options = new List<string>();
@@ -153,11 +149,9 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                     terminalOutbreakGame.enemyManager.DealDamage(playerWeaponDamage, playerTargetNumber);
                     alliesDamageReadout = AlliesDamage(); // calculate ally damage
                     trapDamageReadout = TrapDamage();
-
                     LRZombiesAdvance(); // if zombies at 0, either attack wall or continue to medium range. If not, repeat LR scene
                     Run();
                     break;
-
                 case 1:
                     chosenRoundWeapon = "secondary";
                     playerWeaponDamage = terminalOutbreakGame.equipmentManager.GetWeaponLRDamage(playerEquippedSecondaryWeapon);
@@ -171,9 +165,7 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                     terminalOutbreakGame.enemyManager.DealDamage(playerWeaponDamage, playerTargetNumber);
                     alliesDamageReadout = AlliesDamage(); // calculate ally damage
                     trapDamageReadout = TrapDamage();
-
                     LRZombiesAdvance();
-                    
                     Run();
                     break;
                 case 2:
@@ -181,10 +173,8 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                     alliesDamageReadout = AlliesDamage(); // calculate ally damage
                     trapDamageReadout = TrapDamage();
                     LRZombiesAdvance();
-                    
                     Run();
                     break;
-
             }
         }
 
@@ -207,14 +197,12 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                 string allyName = ally.GetName();
                 int allyDamage = ally.GetLRDamage();
                 int allyTargetMulti = ally.GetLRTargetMulti();
-                
+
                 if (allyTargetMulti > totalEnemies)
                 {
                     allyTargetMulti = totalEnemies;
                 }
-                
                 terminalOutbreakGame.enemyManager.DealDamage(allyDamage, allyTargetMulti);
-                
                 totalAllyDamage += $"{ Environment.NewLine}{allyName} deals {allyDamage} damage to {allyTargetMulti} enemies.";
             }
             if (allyCount == 0)
@@ -226,7 +214,6 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                 totalAllyDamage += Environment.NewLine;
             }
             return totalAllyDamage;
-
         }
 
         public string TrapDamage()
@@ -352,10 +339,7 @@ namespace Terminal_Outbreak.Scenes.CombatScenes
                     display += $"{Environment.NewLine}{zombieCount} Zombie are approaching at {distance}m distance. What weapon would you like to use?{Environment.NewLine}";
                 }
             }
-            
             return display ;
-        }
-
-        
+        }       
     }
 }

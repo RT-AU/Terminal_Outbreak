@@ -21,22 +21,22 @@ namespace Terminal_Outbreak.Managers
         public ResourceManager()
         {
             baseResources = new List<Resource>();
-            lootTable = 
-                [40, // Food chance
-                30, // Wood chance
-                28, // Metal chance
-                18, // Fuel Barrel chance
-                15, // Ammunition chance
-                10, // Pipes chance
-                7,  // Gun parts chance
-                5,   // Engine Parts
-                3, // Electrical Kit
+            lootTable = // CREATE LOOT TABLE
+                [40,    // Food chance
+                30,     // Wood chance
+                28,     // Metal chance
+                18,     // Fuel Barrel chance
+                15,     // Ammunition chance
+                10,     // Pipes chance
+                7,      // Gun parts chance
+                5,      // Engine Parts
+                3,      // Electrical Kit
                 ];
 
             random = new Random();
             rationConsumption = 1;
 
-            for (int i = 0; i < 5; i++) // gives the player 5 rations to start with
+            for (int i = 0; i < 5; i++) // gives the player 5 rations when game starts
             {
                 baseResources.Add(new Resource(0));
             }
@@ -127,7 +127,6 @@ namespace Terminal_Outbreak.Managers
             return rationsCount;
         }
 
-
         public string GetResources()
         {
             int formatCounter = 0;
@@ -208,6 +207,4 @@ namespace Terminal_Outbreak.Managers
             }
         }
     }
-
-    
 }

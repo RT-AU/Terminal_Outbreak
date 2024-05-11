@@ -31,7 +31,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             fuelSessionCompleted = false;
             engineSessionCompleted = false;
             electricalSessionCompleted = false;
-        
         }
 
         public override void Run()
@@ -46,7 +45,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             options.Add("Allocate Supplies for Repair");
             options.Add("Repair Helicopter - 6 Hours");
             options.Add("RETURN");
-
 
             Menu resupplyResultsMenu = new Menu(display, options, header);
             int selectedIndex = resupplyResultsMenu.RunHeaderVersion();
@@ -140,7 +138,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                             Console.WriteLine($"{Environment.NewLine}Press ENTER to continue.");
                             Utils.PressEnter();
                         }
-                        
                     }
 
                     if (repairTime == 0 && helicopterRepaired == false)
@@ -152,7 +149,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                         Utils.PressEnter();
                         terminalOutbreakGame.baseManager.SetHelicopterFixed();
                     }
-
                     this.Run();
                     break;
                 case 2:
@@ -161,7 +157,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             }
         }
 
-
         public void ReduceMetalRequired(int allocated)
         {
             if(metalRequired >= allocated)
@@ -169,6 +164,7 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                 metalRequired -= allocated;
             }
         }
+
         public void ReduceFuelRequired(int allocated)
         {
             if (fuelRequired >= allocated)
@@ -176,6 +172,7 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                 fuelRequired -= allocated;
             }
         }
+
         public void ReduceEnginePartsRequired(int allocated)
         {
             if (enginePartsRequired >= allocated)
@@ -183,6 +180,7 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                 enginePartsRequired -= allocated;
             }
         }
+
         public void ReduceElectricalKitsRequired(int allocated)
         {
             if (electricalKitRequired >= allocated)
@@ -190,7 +188,5 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                 electricalKitRequired -= allocated;
             }
         }
-
-
     }
 }

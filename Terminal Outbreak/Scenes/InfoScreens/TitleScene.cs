@@ -23,12 +23,10 @@ namespace Terminal_Outbreak.Scenes.InfoScreens
             display += Utils.WrapText($"{Environment.NewLine}{Environment.NewLine}*CAUTION*: The method by which this game renders scenes will cause flickering in the terminal when keys are pressed. If you are sensitive to this, consider avoiding it.");
             display += Utils.WrapText($"{Environment.NewLine}{Environment.NewLine}Welcome to Terminal Outbreak. (Use the Arrow Keys to cycle through options and Enter to select). ");
 
-
             List<string> options = new List<string>();
             options.Add("Play");
             options.Add("About");
             options.Add("Exit");
-
 
             Menu mainMenu = new Menu(display, options, mainTitle);
             int selectedIndex = mainMenu.Run();
@@ -60,7 +58,6 @@ namespace Terminal_Outbreak.Scenes.InfoScreens
 
                     Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}Press ENTER to continue...");
                     Utils.PressEnter();
-
                     PlayGame();
                     break;
 
@@ -80,8 +77,6 @@ namespace Terminal_Outbreak.Scenes.InfoScreens
             terminalOutbreakGame.baseScene.Run();
         }
 
-
-
         private void DisplayAboutInformation()
         {
             Console.Clear();
@@ -94,7 +89,6 @@ namespace Terminal_Outbreak.Scenes.InfoScreens
             Utils.PressEnter();
             Console.ResetColor();
             Run();
-
         }
     }
 }

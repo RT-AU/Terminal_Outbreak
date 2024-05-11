@@ -17,7 +17,6 @@ namespace Terminal_Outbreak.Scenes
         private List<Weapon> equipment;
         private bool failedRun;
 
-
         public ResupplyScene(TerminalOutbreakGame game) : base(game)
         {
             resources = new List<Resource>();
@@ -46,8 +45,7 @@ namespace Terminal_Outbreak.Scenes
             {
                 display += Utils.WrapText($"{Environment.NewLine}How much time do you want to spend looking for supplies?{Environment.NewLine}");
             }
-
-            
+                        
             List<string> options = new List<string>();
             options.Add("Long Resupply Run - 8hrs");
             options.Add("Short Resupply Run - 4hrs");
@@ -110,11 +108,9 @@ namespace Terminal_Outbreak.Scenes
                 List<string> options = new List<string>();
                 options.Add("RETURN");
 
-
                 Menu resupplyResultsMenu = new Menu(display, options, header);
                 int selectedIndex = resupplyResultsMenu.RunHeaderVersion();
 
-                //switch (selectedIndex) { case 0: terminalOutbreakGame.baseScene.Run(); break; };  
                 switch (selectedIndex) { case 0: this.Run(); break; };  
                             
             }

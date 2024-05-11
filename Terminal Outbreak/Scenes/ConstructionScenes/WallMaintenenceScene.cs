@@ -27,10 +27,6 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
         {
             bool barrierBuilt = terminalOutbreakGame.baseManager.IsBarrierBuilt();
             bool barrierDestroyed = terminalOutbreakGame.baseManager.IsBarrierDestroyed();
-            
-            
-
-
             string header = Utils.FrameText("Construction Options");
             string display = string.Empty;
             if (barrierBuilt)
@@ -51,10 +47,8 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
             {
                 options.Add("Construct Barrier Wall");
             }
-            
+
             options.Add("RETURN");
-
-
             Menu resupplyResultsMenu = new Menu(display, options, header);
             int selectedIndex = resupplyResultsMenu.RunHeaderVersion();
 
@@ -136,16 +130,11 @@ namespace Terminal_Outbreak.Scenes.ConstructionScenes
                         }
 
                     }
-                    
-
                     Run();
                     break;
-                    
-                    
                 case 1:
                     terminalOutbreakGame.constructionChoiceScene.Run();
                     break;
-
             }
         }
     }

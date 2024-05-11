@@ -123,7 +123,7 @@ namespace Terminal_Outbreak.Defences
             trapHealth -= damage;
         }
 
-        public void Repair() // for now it will just completely repair the baricade at a time cost of 1 hours
+        public void Repair()
         {
             trapHealth = trapMaxHealth;
         }

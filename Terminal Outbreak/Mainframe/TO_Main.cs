@@ -8,7 +8,6 @@ namespace Terminal_Outbreak.Mainframe
 {
     class TO_Main
     {
-
         static void Main(string[] args)
         {
             Console.Title = "Terminal Outbreak";
@@ -16,12 +15,6 @@ namespace Terminal_Outbreak.Mainframe
 
             TerminalOutbreakGame terminalOutbreakGame = new TerminalOutbreakGame();
             terminalOutbreakGame.Start();
-
         }
-
-
-
-
-
     }
 }

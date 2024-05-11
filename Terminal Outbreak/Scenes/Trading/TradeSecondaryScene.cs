@@ -51,7 +51,6 @@ namespace Terminal_Outbreak.Scenes.Trading
             {
                 display = Utils.WrapText($"{Environment.NewLine}There are a range of secondary weapons that you can buy. You currently have {baseRationsCount} Rations.{Environment.NewLine}");
             }
-            
 
             // weapon names and description
             if (!fwOwned) { display += $"{Environment.NewLine}{firstWeaponName}{Environment.NewLine}{firstWeaponDescription}{Environment.NewLine}"; }
@@ -94,7 +93,6 @@ namespace Terminal_Outbreak.Scenes.Trading
                         Console.WriteLine("Press ENTER to continue");
                         Utils.PressEnter();
                     }
-
                     this.Run();
                     break;
                 case 1: // Second Weapon
@@ -146,6 +144,4 @@ namespace Terminal_Outbreak.Scenes.Trading
             }
         }
     }
-    
-    
 }
